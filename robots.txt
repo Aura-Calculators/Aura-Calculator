@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aura-calculators.github.io/Aura-Calculator/sitemap.xml
