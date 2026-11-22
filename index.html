@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Online Calculator — Standard, Scientific, Percentage &amp; Programmer</title>
+<meta name="description" content="Free online calculator with Standard, Scientific, Percentage &amp; Programmer modes. Keyboard support, DEG/RAD toggle, precision filters and a searchable history.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#07090f">
+<meta name="color-scheme" content="dark">
+
+<!-- SEO: replace https://www.example.com/ with your real domain (canonical, og:url, og:image and JSON-LD below) -->
+<link rel="canonical" href="https://www.example.com/">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AuraCalc">
+<meta property="og:title" content="Free Online Calculator — Standard, Scientific, Percentage &amp; Programmer">
+<meta property="og:description" content="Fast, accurate online calculator for everyday and scientific math. Full keyboard support, smart precision filters and a saved history tape. 100% free.">
+<meta property="og:url" content="https://www.example.com/">
+<meta property="og:image" content="https://www.example.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AuraCalc — Free Online Calculator">
+<meta name="twitter:description" content="Standard, Scientific, Percentage and Programmer calculator modes with keyboard support and searchable history.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Crect x='8' y='7' width='16' height='6' rx='1.6' fill='white'/%3E%3Cg fill='white'%3E%3Ccircle cx='11' cy='19' r='1.7'/%3E%3Ccircle cx='16' cy='19' r='1.7'/%3E%3Ccircle cx='21' cy='19' r='1.7'/%3E%3Ccircle cx='11' cy='24' r='1.7'/%3E%3Ccircle cx='16' cy='24' r='1.7'/%3E%3Ccircle cx='21' cy='24' r='1.7'/%3E%3C/g%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
+
+<!-- ================= GOOGLE ANALYTICS (GA4): PASTE YOUR G- TAG HERE =================
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+================= END GOOGLE ANALYTICS ================= -->
+
+<!-- JSON-LD: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AuraCalc Online Calculator",
+  "url": "https://www.example.com/",
+  "description": "Free online calculator with Standard, Scientific, Percentage and Programmer modes, DEG/RAD toggle, precision filters, keyboard support and a searchable history tape.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (runs in a web browser)",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Standard calculator with memory keys",
+    "Scientific calculator with trigonometry, logarithms, powers, roots and factorial",
+    "DEG and RAD angle toggle",
+    "Percentage and discount calculator",
+    "Programmer calculator with DEC, HEX, OCT and BIN conversion",
+    "Decimal rounding and thousands separator filters",
+    "Searchable calculation history with export to TXT and CSV",
+    "Full physical keyboard support"
+  ]
+}
+</script>
+
+<!-- JSON-LD: FAQPage (kept in sync with the visible FAQ) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What keyboard shortcuts does the calculator support?", "acceptedAnswer": { "@type": "Answer", "text": "Type digits 0–9, a decimal point, + − * / for arithmetic, ( and ) for brackets, ^ for powers, ! for factorial and % for percent. Press Enter or = to calculate, Backspace to delete the last character and Escape to clear everything. In Scientific mode you can also press P for π, E for Euler's number, S, C and T for sin, cos and tan, L for log, N for ln and R for square root." } },
+    { "@type": "Question", "name": "Which scientific functions are included?", "acceptedAnswer": { "@type": "Answer", "text": "Scientific mode includes sin, cos, tan, asin, acos and atan, base-10 and natural logarithms, squares, cubes, any power, eˣ and 10ˣ, square and cube roots, factorial, absolute value, the constants π and e, a 1/x reciprocal key, an Ans key and nested parentheses." } },
+    { "@type": "Question", "name": "What is the difference between DEG and RAD?", "acceptedAnswer": { "@type": "Answer", "text": "DEG measures angles in degrees, where a full circle is 360°, while RAD measures them in radians, where a full circle is 2π. Use DEG for everyday geometry and RAD for calculus and physics. For example, sin(30) equals 0.5 in DEG mode but about −0.988 in RAD mode." } },
+    { "@type": "Question", "name": "Is my calculation history private?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The history tape is stored only in your own browser using localStorage. Nothing is uploaded to a server, and you can delete single entries or press Clear History at any time. Clearing your browser data also removes it." } },
+    { "@type": "Question", "name": "How do I change decimal rounding and precision?", "acceptedAnswer": { "@type": "Answer", "text": "Use the Rounding filter above the display to choose Auto / Exact, 2, 4 or 6 decimals, or scientific notation. Rounding only changes how the answer is shown and copied; the full-precision value is still used if you keep calculating. In Auto mode results show up to 15 significant digits." } },
+    { "@type": "Question", "name": "Does the calculator work on mobile phones and tablets?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The layout is responsive, the keys are large enough for thumbs, and the history tape becomes a collapsible drawer on small screens. Because all calculations run locally in your browser, it stays fast even on slow connections." } },
+    { "@type": "Question", "name": "How do I calculate percentages and discounts?", "acceptedAnswer": { "@type": "Answer", "text": "Switch to Percentage mode and pick a filter: what is X% of Y, X is what % of Y, percentage increase or decrease, or final price after discount and tax. Enter your numbers and the answer, formula and breakdown update instantly. In Standard mode you can also type 200 + 10 % to add ten percent to 200." } },
+    { "@type": "Question", "name": "What do MC, MR, M+, M− and MS do?", "acceptedAnswer": { "@type": "Answer", "text": "MS stores the current value in memory, M+ adds it to the stored value and M− subtracts it. MR recalls the stored number into your calculation and MC clears memory. An M badge appears on the display while memory holds a non-zero value." } },
+    { "@type": "Question", "name": "How does Programmer mode convert between number bases?", "acceptedAnswer": { "@type": "Answer", "text": "Choose DEC, HEX, OCT or BIN and the display shows the current value in all four bases at once. Type in the active base, switch bases at any time to convert, and use AND, OR, XOR, NOT, shifts and MOD on whole numbers within the 8, 16, 32 or 64-bit word size you select." } },
+    { "@type": "Question", "name": "Is the calculator free, and is it accurate?", "acceptedAnswer": { "@type": "Answer", "text": "It is completely free, with no sign-up or install. The expression parser follows the standard order of operations (PEMDAS/BODMAS), avoids unsafe eval(), and reports clear errors such as Division by Zero, Invalid Domain and Syntax Error instead of guessing." } }
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   AuraCalc — design tokens
+   ============================================================ */
+:root{
+  --bg:#07090f; --bg2:#0d111c; --card:#111625; --card2:#0e1320;
+  --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.16);
+  --text:#f8fafc; --muted:#94a3b8; --muted2:#64748b;
+  --indigo:#6366f1; --violet:#8b5cf6; --cyan:#22d3ee; --amber:#fbbf24; --emerald:#10b981; --rose:#fb7185;
+  --grad:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);
+  --sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;font-family:var(--sans);color:var(--text);background:var(--bg);background-image:linear-gradient(180deg,#07090f 0%,#0d111c 100%);background-attachment:fixed;line-height:1.65;-webkit-font-smoothing:antialiased;min-height:100vh}
+img,svg{display:block;max-width:100%}
+a{color:#a5b4fc;text-decoration:none}
+a:hover{color:#c7d2fe;text-decoration:underline}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid #818cf8;outline-offset:2px;border-radius:8px}
+[hidden]{display:none!important}
+h1,h2,h3{line-height:1.2;letter-spacing:-.02em;margin:0}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 16px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:#fff;color:#000;padding:8px 14px;border-radius:8px}
+.skip:focus{left:8px}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:12px;padding:12px 20px;font-weight:600;font-size:1rem;line-height:1.1;transition:transform .12s,box-shadow .2s,background .2s,border-color .2s;text-decoration:none!important;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 30px rgba(99,102,241,.38)}
+.btn-primary:hover{box-shadow:0 14px 36px rgba(139,92,246,.5);color:#fff}
+.btn-ghost{background:rgba(255,255,255,.04);border-color:var(--line2);color:var(--text)}
+.btn-ghost:hover{background:rgba(255,255,255,.09);color:#fff}
+.btn-sm{padding:9px 13px;font-size:.88rem;border-radius:10px;min-height:40px}
+.btn svg{width:16px;height:16px;flex:none}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(7,9,15,.72);backdrop-filter:saturate(160%) blur(16px);-webkit-backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:12px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem;letter-spacing:-.03em;color:var(--text)}
+.brand:hover{text-decoration:none;color:#fff}
+.brand-icon{width:36px;height:36px;border-radius:11px;background:var(--grad);display:grid;place-items:center;box-shadow:0 6px 20px rgba(99,102,241,.45)}
+.brand-icon svg{width:22px;height:22px}
+.nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:2px;padding:10px 16px 16px;background:rgba(9,12,20,.97);border-bottom:1px solid var(--line)}
+.nav-links.open{display:flex}
+.nav-links a{color:var(--muted);padding:12px 10px;border-radius:10px;font-weight:500}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.05);text-decoration:none}
+.nav-spacer{flex:1}
+.menu-btn{width:44px;height:44px;border-radius:12px;border:1px solid var(--line2);background:rgba(255,255,255,.04);display:grid;place-items:center}
+.menu-btn svg{width:20px;height:20px}
+.nav .btn{padding:10px 16px;font-size:.92rem}
+@media (min-width:900px){
+  .menu-btn{display:none}
+  .nav-links{display:flex;position:static;flex-direction:row;padding:0;background:none;border:0;margin-left:18px;gap:4px}
+  .nav-links a{padding:8px 12px;font-size:.93rem}
+}
+@media (max-width:420px){.hide-xs{display:none}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:52px 0 18px;text-align:center;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-25% -10% auto -10%;height:130%;z-index:-1;background:
+  radial-gradient(42% 50% at 50% 0%,rgba(99,102,241,.34),transparent 70%),
+  radial-gradient(30% 40% at 86% 18%,rgba(139,92,246,.24),transparent 70%),
+  radial-gradient(30% 40% at 12% 26%,rgba(34,211,238,.15),transparent 70%)}
+.eyebrow{display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#a5b4fc;margin:0 0 14px}
+.hero h1{font-size:clamp(2.05rem,5.6vw,3.7rem);font-weight:800;max-width:880px;margin:0 auto 16px}
+.grad-text{background:linear-gradient(90deg,#818cf8,#a78bfa 45%,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{max-width:700px;margin:0 auto 26px;color:var(--muted);font-size:clamp(1rem,2.2vw,1.15rem)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:26px}
+.trust{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;list-style:none;margin:0;padding:0}
+.trust li{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:#cbd5e1;font-size:.88rem;font-weight:500}
+.trust svg{width:15px;height:15px;color:var(--emerald)}
+
+/* ---------- Ad slots (fixed min-heights prevent layout shift) ---------- */
+.ad-wrap{margin:22px auto;text-align:center;max-width:100%}
+.ad-label{display:block;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted2);margin-bottom:6px}
+.ad-slot{margin:0 auto;display:flex;align-items:center;justify-content:center;overflow:hidden;max-width:100%;border-radius:12px;background:rgba(255,255,255,.012);border:1px solid rgba(255,255,255,.04)}
+.ad-top,.ad-footer{width:100%;max-width:728px;min-height:50px}
+.ad-native{width:100%;max-width:970px;min-height:100px}
+.ad-article{width:100%;max-width:728px;min-height:250px}
+@media (min-width:768px){.ad-top,.ad-footer{min-height:90px}.ad-native{min-height:120px}}
+
+/* ---------- Workspace ---------- */
+.ws-section{padding:6px 0 18px}
+.ws{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:960px){.ws{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:start}}
+.card{background:linear-gradient(180deg,rgba(19,24,41,.96),rgba(15,20,34,.96));border:1px solid var(--line);border-radius:24px;box-shadow:0 24px 70px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05)}
+.calc-card{padding:14px;outline:none}
+@media (min-width:640px){.calc-card{padding:22px}}
+.modebar{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
+.modebar::-webkit-scrollbar{display:none}
+.pill{flex:0 0 auto;min-height:42px;padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--muted);font-weight:600;font-size:.92rem;white-space:nowrap;transition:background .2s,color .2s,border-color .2s,box-shadow .2s}
+.pill:hover{color:#fff;border-color:var(--line2)}
+.pill[aria-selected="true"],.pill[aria-pressed="true"]{background:var(--grad);border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(99,102,241,.38)}
+.pill.sm{min-height:34px;padding:6px 12px;font-size:.8rem}
+.opts{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;margin:14px 0 4px}
+.opt{display:flex;align-items:center;gap:8px}
+.opt-l{font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted2)}
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:10px;overflow:hidden}
+.seg button{border:0;background:transparent;color:var(--muted);padding:8px 14px;min-height:38px;font-weight:600;font-size:.82rem;font-family:var(--mono)}
+.seg button[aria-pressed="true"]{background:rgba(99,102,241,.25);color:#fff}
+.select{appearance:none;-webkit-appearance:none;background:rgba(255,255,255,.04) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2394a3b8' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 12px center;border:1px solid var(--line2);border-radius:10px;padding:8px 32px 8px 12px;min-height:40px;font-size:16px;color:var(--text);max-width:100%}
+.select option{background:#111625;color:#f8fafc}
+.switch{position:relative;width:46px;height:26px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.08);padding:0;transition:background .2s}
+.switch .knob{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#cbd5e1;transition:transform .2s,background .2s}
+.switch[aria-checked="true"]{background:var(--grad);border-color:transparent}
+.switch[aria-checked="true"] .knob{transform:translateX(20px);background:#fff}
+
+.display{position:relative;margin:12px 0 10px;padding:14px 16px 10px;border-radius:18px;background:linear-gradient(180deg,#090c17,#0c1120);border:1px solid var(--line);box-shadow:inset 0 2px 16px rgba(0,0,0,.5)}
+.badges{display:flex;gap:6px;min-height:20px;margin-bottom:2px}
+.badge{font-family:var(--mono);font-size:.64rem;font-weight:600;letter-spacing:.08em;padding:2px 7px;border-radius:6px;border:1px solid rgba(34,211,238,.3);color:var(--cyan);background:rgba(34,211,238,.08)}
+.badge.amber{border-color:rgba(251,191,36,.35);color:var(--amber);background:rgba(251,191,36,.08)}
+.disp-top{font-family:var(--mono);font-size:.98rem;color:var(--muted);min-height:1.6em;white-space:nowrap;overflow-x:auto;scrollbar-width:none;text-align:right}
+.disp-top::-webkit-scrollbar{display:none}
+.disp-main{display:flex;justify-content:flex-end;align-items:center;height:64px;overflow:hidden}
+.disp-main span{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600;font-size:2.7rem;letter-spacing:-.03em;white-space:nowrap;line-height:1}
+.disp-main.preview span{color:#cbd5e1;font-weight:500}
+.disp-main.error span{color:var(--rose);font-size:1.5rem;letter-spacing:0}
+.copy-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+
+/* ---------- Keypad ---------- */
+.keys{display:grid;gap:8px}
+.keys-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.keys-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.keys-6{grid-template-columns:repeat(6,minmax(0,1fr))}
+.keys-gap{margin-top:10px}
+.key{display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 2px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.045);color:var(--text);font-family:var(--mono);font-size:1.15rem;font-weight:500;user-select:none;-webkit-user-select:none;transition:transform .06s,background .15s,border-color .15s}
+.key:hover{background:rgba(255,255,255,.09);border-color:var(--line2)}
+.key:active,.key.pressed{transform:scale(.95);background:rgba(255,255,255,.15)}
+.key.k-num{background:rgba(255,255,255,.075);font-weight:600}
+.key.k-op{color:var(--amber);background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.2);font-size:1.3rem}
+.key.k-fn{min-height:44px;border-radius:12px;font-size:.86rem;color:#a5f3fc;background:rgba(34,211,238,.06);border-color:rgba(34,211,238,.16)}
+.key.k-mem{min-height:38px;border-radius:10px;font-size:.78rem;font-weight:600;color:var(--muted)}
+.key.k-util{color:var(--rose);background:rgba(251,113,133,.08);border-color:rgba(251,113,133,.22)}
+.key.k-eq{background:var(--grad);border-color:transparent;color:#fff;font-size:1.45rem;box-shadow:0 8px 24px rgba(99,102,241,.42)}
+.key:disabled{opacity:.25;cursor:not-allowed;transform:none}
+@media (max-width:380px){.key{min-height:50px;font-size:1.05rem}.key.k-fn{font-size:.78rem}}
+
+/* ---------- Percentage panel ---------- */
+.subpills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.pct-fields{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.field label{display:block;font-size:.76rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted2);margin-bottom:6px}
+.field input{width:100%;min-height:50px;padding:10px 14px;border-radius:12px;border:1px solid var(--line2);background:rgba(255,255,255,.04);font-family:var(--mono);font-size:18px;color:var(--text)}
+.field input:focus{outline:2px solid #818cf8;outline-offset:1px}
+.formula{margin-top:14px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.025);font-family:var(--mono);font-size:.92rem;color:#cbd5e1;overflow-x:auto}
+.formula .fl{white-space:nowrap}
+.formula .fl.last{color:var(--emerald);font-weight:600}
+.formula .ft{font-family:var(--sans);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:6px}
+.pct-rows{margin:12px 0 0;display:grid;gap:6px}
+.pct-rows div{display:flex;justify-content:space-between;gap:12px;padding:9px 14px;border-radius:10px;background:rgba(255,255,255,.03);font-size:.92rem}
+.pct-rows dt{color:var(--muted)}
+.pct-rows dd{margin:0;font-family:var(--mono);font-weight:600}
+.pct-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+
+/* ---------- Programmer panel ---------- */
+.bases{display:grid;gap:6px;margin-bottom:12px}
+.base-row{display:grid;grid-template-columns:52px minmax(0,1fr);align-items:center;gap:10px;width:100%;text-align:left;padding:8px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+.base-row:hover{border-color:var(--line2)}
+.base-row[aria-pressed="true"]{border-color:rgba(129,140,248,.7);background:rgba(99,102,241,.14)}
+.base-row b{font-family:var(--mono);font-size:.78rem;color:var(--cyan)}
+.base-row span{font-family:var(--mono);font-size:.92rem;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+
+/* ---------- History ---------- */
+.history-card{padding:16px}
+@media (min-width:640px){.history-card{padding:20px}}
+.hist-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.hist-head h3{font-size:1.05rem;display:flex;align-items:center;gap:8px}
+.count{font-family:var(--mono);font-size:.72rem;padding:2px 8px;border-radius:999px;background:rgba(99,102,241,.22);color:#c7d2fe}
+.hist-body{display:none;margin-top:12px}
+.history-card.open .hist-body{display:block}
+@media (min-width:960px){.hist-body{display:block}.hist-toggle{display:none}}
+.hist-filters{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;margin-bottom:10px}
+.hist-filters::-webkit-scrollbar{display:none}
+.search input{width:100%;min-height:44px;padding:9px 14px;border-radius:12px;border:1px solid var(--line2);background:rgba(255,255,255,.04);font-size:16px;color:var(--text)}
+.hist-list{list-style:none;margin:12px 0 0;padding:0;max-height:430px;overflow-y:auto;display:grid;gap:8px;scrollbar-width:thin;scrollbar-color:#334155 transparent}
+.h-item{display:flex;align-items:stretch;gap:4px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}
+.h-item:hover{border-color:var(--line2)}
+.h-main{flex:1;min-width:0;text-align:right;background:none;border:0;padding:10px 6px 10px 12px;border-radius:14px}
+.h-main:hover{background:rgba(255,255,255,.03)}
+.h-expr{display:block;font-family:var(--mono);font-size:.8rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.h-res{display:block;font-family:var(--mono);font-size:1.12rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.h-tag{display:block;text-align:left;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#a5b4fc;margin-bottom:2px}
+.h-actions{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:4px 6px 4px 0}
+.h-actions button{width:32px;height:28px;border:0;border-radius:8px;background:transparent;color:var(--muted2);font-size:.95rem;line-height:1}
+.h-actions button:hover{background:rgba(255,255,255,.08);color:#fff}
+.h-actions .h-star[aria-pressed="true"]{color:var(--amber)}
+.hist-empty{padding:26px 12px;text-align:center;color:var(--muted2);font-size:.92rem;border:1px dashed var(--line);border-radius:14px}
+.hist-foot{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.btn-danger{color:var(--rose);border-color:rgba(251,113,133,.3)}
+
+/* ---------- Sections ---------- */
+.section{padding:60px 0}
+.section-head{max-width:740px;margin:0 auto 34px;text-align:center}
+.section-head h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:12px}
+.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:640px){.grid.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.grid.g4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.fcard{padding:22px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(19,24,41,.9),rgba(14,19,32,.9));transition:transform .2s,border-color .2s}
+.fcard:hover{transform:translateY(-3px);border-color:rgba(129,140,248,.4)}
+.ficon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:rgba(99,102,241,.14);border:1px solid rgba(129,140,248,.25);color:#a5b4fc;margin-bottom:14px}
+.ficon svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.fcard h3{font-size:1.05rem;margin-bottom:6px}
+.fcard p{margin:0;color:var(--muted);font-size:.93rem}
+.steps{display:grid;gap:16px;grid-template-columns:minmax(0,1fr);counter-reset:s}
+@media (min-width:800px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.step{position:relative;padding:26px 22px 22px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+.step .num{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--grad);font-weight:800;font-family:var(--mono);margin-bottom:14px;box-shadow:0 8px 22px rgba(99,102,241,.4)}
+.step h3{font-size:1.08rem;margin-bottom:6px}
+.step p{margin:0;color:var(--muted);font-size:.94rem}
+
+/* ---------- Long-form guide ---------- */
+.prose{max-width:820px;margin:0 auto;color:#cbd5e1;font-size:1.02rem}
+.prose h2{font-size:clamp(1.45rem,3vw,1.9rem);color:var(--text);margin:46px 0 14px;padding-top:6px}
+.prose h3{font-size:1.18rem;color:var(--text);margin:28px 0 8px}
+.prose p{margin:0 0 16px}
+.prose ul,.prose ol{margin:0 0 18px;padding-left:22px}
+.prose li{margin-bottom:8px}
+.prose strong{color:var(--text)}
+.prose code,.kbd{font-family:var(--mono);font-size:.9em;background:rgba(99,102,241,.13);border:1px solid rgba(129,140,248,.2);padding:1px 7px;border-radius:7px;color:#e0e7ff;white-space:nowrap}
+.callout{margin:20px 0;padding:16px 18px;border-radius:14px;border:1px solid rgba(34,211,238,.25);background:rgba(34,211,238,.06);color:#cffafe}
+.callout strong{color:#fff}
+.table-wrap{overflow-x:auto;margin:18px 0 22px;border:1px solid var(--line);border-radius:14px}
+.prose table{width:100%;border-collapse:collapse;font-size:.93rem}
+.prose th,.prose td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+.prose th{background:rgba(255,255,255,.04);color:var(--text);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.prose tr:last-child td{border-bottom:0}
+.prose td.m{font-family:var(--mono)}
+.prose td.wrap{white-space:normal}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:820px;margin:0 auto}
+.faq details{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);margin-bottom:10px;transition:border-color .2s,background .2s}
+.faq details[open]{border-color:rgba(129,140,248,.4);background:rgba(99,102,241,.06)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 18px;font-weight:600;font-size:1.02rem;min-height:56px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg) translateY(-1px)}
+.faq .ans{padding:0 18px 18px;color:var(--muted)}
+.faq .ans p{margin:0}
+
+/* ---------- Footer ---------- */
+.site-footer{margin-top:24px;border-top:1px solid var(--line);background:rgba(5,7,12,.6)}
+.footer-grid{display:grid;gap:30px;grid-template-columns:minmax(0,1fr);padding:46px 0 30px}
+@media (min-width:640px){.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:960px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr 1.2fr}}
+.site-footer h4{margin:0 0 12px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2)}
+.site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.site-footer li a{color:#cbd5e1;font-size:.94rem}
+.site-footer p{color:var(--muted);font-size:.92rem;margin:12px 0 0}
+.footer-bottom{border-top:1px solid var(--line);padding:18px 0 28px;color:var(--muted2);font-size:.82rem;display:grid;gap:8px}
+.footer-bottom p{margin:0}
+
+/* ---------- Toast ---------- */
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,24px);opacity:0;pointer-events:none;z-index:90;background:var(--emerald);color:#04201a;font-weight:700;font-size:.92rem;padding:11px 18px;border-radius:12px;box-shadow:0 12px 34px rgba(16,185,129,.4);transition:opacity .2s,transform .2s;max-width:calc(100vw - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast.warn{background:var(--amber);color:#2b1d00;box-shadow:0 12px 34px rgba(251,191,36,.35)}
+.noscript{padding:18px;border:1px solid var(--line2);border-radius:14px;color:var(--muted)}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#calculator">Skip to calculator</a>
+
+<!-- ======================= HEADER ======================= -->
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="AuraCalc home">
+      <span class="brand-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="2.8" width="15" height="18.4" rx="3.2"/><rect x="7.5" y="5.8" width="9" height="3.4" rx="1" fill="#fff" stroke="none"/><path d="M8.2 13h.01M12 13h.01M15.8 13h.01M8.2 17h.01M12 17h.01M15.8 17h.01" stroke-width="2.2"/></svg>
+      </span>
+      AuraCalc
+    </a>
+    <nav id="nav-links" class="nav-links" aria-label="Primary">
+      <a href="#calculator">Calculator</a>
+      <a href="#modes">Modes &amp; Filters</a>
+      <a href="#features">Features</a>
+      <a href="#guide">Guide</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <span class="nav-spacer"></span>
+    <a class="btn btn-primary" href="#calculator" data-launch>Launch<span class="hide-xs">&nbsp;Calculator</span></a>
+    <button type="button" class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ======================= HERO ======================= -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Free · Instant · No sign-up</span>
+    <h1>Fast, accurate online calculator for <span class="grad-text">everyday &amp; scientific math</span></h1>
+    <p class="sub">AuraCalc brings Standard, Scientific, Percentage and Programmer calculators into one fast workspace, with full keyboard support, smart precision filters and a searchable history tape. Everything runs in your browser, so answers are instant and private.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#calculator" data-launch>Start Calculating</a>
+      <a class="btn btn-ghost" href="#features">Explore features</a>
+    </div>
+    <ul class="trust" aria-label="Highlights">
+      <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg>100% Free</li>
+      <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg>Scientific &amp; Standard Modes</li>
+      <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg>Full Keyboard Support</li>
+      <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg>Saved History Tape</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= AD SLOT: TOP (Leaderboard 728x90 / Mobile 320x50) =======================
+     Paste your Adsterra banner code INSIDE the #ad-slot-top div below (keep the wrapper and the id). -->
+<div class="container">
+  <aside class="ad-wrap" aria-label="Advertisement">
+    <span class="ad-label">Advertisement</span>
+    <div id="ad-slot-top" class="ad-slot ad-top">
+      <!-- PASTE ADSTERRA 728x90 / 320x50 <script> TAG HERE -->
+    </div>
+  </aside>
+</div>
+
+<!-- ======================= CALCULATOR WORKSPACE ======================= -->
+<section id="calculator" class="ws-section" aria-label="Online calculator workspace">
+  <div class="container">
+    <div class="ws">
+
+      <!-- ---------- Calculator card ---------- -->
+      <div class="card calc-card" id="workspace" tabindex="-1">
+
+        <div id="modes" class="modebar" role="tablist" aria-label="Calculator mode filter">
+          <button type="button" class="pill" role="tab" data-mode="standard" aria-selected="true">Standard</button>
+          <button type="button" class="pill" role="tab" data-mode="scientific" aria-selected="false">Scientific</button>
+          <button type="button" class="pill" role="tab" data-mode="percentage" aria-selected="false">Percentage &amp; Discount</button>
+          <button type="button" class="pill" role="tab" data-mode="programmer" aria-selected="false">Programmer</button>
+        </div>
+
+        <div class="opts">
+          <div class="opt" id="opt-angle" hidden>
+            <span class="opt-l">Angle</span>
+            <div class="seg" role="group" aria-label="Angle unit">
+              <button type="button" data-angle="deg" aria-pressed="true">DEG</button>
+              <button type="button" data-angle="rad" aria-pressed="false">RAD</button>
+            </div>
+          </div>
+          <div class="opt" id="opt-round">
+            <label class="opt-l" for="sel-round">Rounding</label>
+            <select id="sel-round" class="select">
+              <option value="auto">Auto / Exact</option>
+              <option value="2">2 Decimals</option>
+              <option value="4">4 Decimals</option>
+              <option value="6">6 Decimals</option>
+              <option value="sci">Scientific Notation (E)</option>
+            </select>
+          </div>
+          <div class="opt" id="opt-bits" hidden>
+            <label class="opt-l" for="sel-bits">Word size</label>
+            <select id="sel-bits" class="select">
+              <option value="64">64-bit (QWORD)</option>
+              <option value="32">32-bit (DWORD)</option>
+              <option value="16">16-bit (WORD)</option>
+              <option value="8">8-bit (BYTE)</option>
+            </select>
+          </div>
+          <div class="opt">
+            <span class="opt-l" id="lbl-sep">Thousands separator</span>
+            <button type="button" class="switch" id="sw-sep" role="switch" aria-checked="true" aria-labelledby="lbl-sep" title="1,250,000.50 vs 1250000.50"><span class="knob"></span></button>
+          </div>
+        </div>
+
+        <div class="display" id="display">
+          <div class="badges" id="badges"></div>
+          <div class="disp-top" id="disp-top"></div>
+          <div class="disp-main" id="disp-main"><span id="disp-res">0</span></div>
+        </div>
+        <div class="copy-row">
+          <button type="button" class="btn btn-ghost btn-sm" id="copy-res"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>Copy Result</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="copy-eq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h14M5 15h14"/></svg>Copy Full Equation</button>
+        </div>
+
+        <noscript><p class="noscript">AuraCalc needs JavaScript to run the calculator. Please enable JavaScript in your browser.</p></noscript>
+
+        <!-- Standard + Scientific keypads (rendered by script) -->
+        <div id="panel-std">
+          <div class="keys keys-5" id="mem-keys" aria-label="Memory keys"></div>
+          <div class="keys keys-6 keys-gap" id="sci-keys" hidden aria-label="Scientific functions"></div>
+          <div class="keys keys-4 keys-gap" id="main-keys" aria-label="Keypad"></div>
+        </div>
+
+        <!-- Percentage & discount -->
+        <div id="panel-pct" hidden>
+          <div class="subpills" id="pct-subs" role="group" aria-label="Percentage calculator type"></div>
+          <div class="pct-fields" id="pct-fields"></div>
+          <div class="formula" id="pct-formula" aria-live="polite"></div>
+          <dl class="pct-rows" id="pct-rows"></dl>
+          <div class="pct-actions">
+            <button type="button" class="btn btn-primary btn-sm" id="pct-save">Save to history</button>
+            <button type="button" class="btn btn-ghost btn-sm" id="pct-use">Use in calculator</button>
+          </div>
+        </div>
+
+        <!-- Programmer / base converter -->
+        <div id="panel-prog" hidden>
+          <div class="bases" id="prog-bases" role="group" aria-label="Number base"></div>
+          <div class="keys keys-6" id="prog-top"></div>
+          <div class="keys keys-4 keys-gap" id="prog-main"></div>
+        </div>
+      </div>
+
+      <!-- ---------- History tape ---------- -->
+      <aside class="card history-card" id="history" aria-labelledby="hist-title">
+        <div class="hist-head">
+          <h3 id="hist-title">Calculation Tape <span class="count" id="hist-count">0</span></h3>
+          <button type="button" class="btn btn-ghost btn-sm hist-toggle" id="hist-toggle" aria-expanded="false" aria-controls="hist-body">Show</button>
+        </div>
+        <div class="hist-body" id="hist-body">
+          <div class="hist-filters" id="hist-filters" role="group" aria-label="Filter history">
+            <button type="button" class="pill sm" data-hf="all" aria-pressed="true">All</button>
+            <button type="button" class="pill sm" data-hf="standard" aria-pressed="false">Standard</button>
+            <button type="button" class="pill sm" data-hf="scientific" aria-pressed="false">Scientific</button>
+            <button type="button" class="pill sm" data-hf="percentage" aria-pressed="false">Percentage</button>
+            <button type="button" class="pill sm" data-hf="programmer" aria-pressed="false">Programmer</button>
+            <button type="button" class="pill sm" data-hf="starred" aria-pressed="false">★ Starred</button>
+          </div>
+          <label class="search"><span class="sr-only">Search history</span><input type="search" id="hist-search" placeholder="Search history…" autocomplete="off" spellcheck="false"></label>
+          <ul class="hist-list" id="hist-list" aria-live="polite"></ul>
+          <div class="hist-foot">
+            <button type="button" class="btn btn-ghost btn-sm" id="exp-txt">Export .txt</button>
+            <button type="button" class="btn btn-ghost btn-sm" id="exp-csv">Export .csv</button>
+            <button type="button" class="btn btn-ghost btn-sm btn-danger" id="hist-clear">Clear History</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= AD SLOT: MID NATIVE (Native / Responsive Banner) =======================
+     Paste your Adsterra Native Banner code INSIDE #ad-slot-mid-native below. -->
+<div class="container">
+  <aside class="ad-wrap" aria-label="Advertisement">
+    <span class="ad-label">Advertisement</span>
+    <div id="ad-slot-mid-native" class="ad-slot ad-native">
+      <!-- PASTE ADSTERRA NATIVE / RESPONSIVE BANNER <script> + container <div> HERE -->
+    </div>
+  </aside>
+</div>
+
+<!-- ======================= FEATURES ======================= -->
+<section id="features" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Features</span>
+      <h2>Everything you need to calculate faster</h2>
+      <p>One workspace, four calculators and a set of smart filters that keep your numbers clean, readable and easy to reuse.</p>
+    </div>
+    <div class="grid g4">
+      <article class="fcard">
+        <div class="ficon"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></div>
+        <h3>Standard &amp; Scientific Modes</h3>
+        <p>Switch instantly between a clean four-function calculator and a full scientific keypad with trigonometry, logarithms, powers, roots and factorials.</p>
+      </article>
+      <article class="fcard">
+        <div class="ficon"><svg viewBox="0 0 24 24"><path d="M4 6h8M18 6h2M4 12h2M12 12h8M4 18h10M20 18h0"/><circle cx="15" cy="6" r="2.2"/><circle cx="9" cy="12" r="2.2"/><circle cx="17" cy="18" r="2.2"/></svg></div>
+        <h3>Smart Mode &amp; Precision Filters</h3>
+        <p>Choose Auto, 2, 4 or 6 decimals or scientific notation, and toggle thousands separators for clean copying into spreadsheets and code.</p>
+      </article>
+      <article class="fcard">
+        <div class="ficon"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2.5"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg></div>
+        <h3>Full Keyboard Shortcuts</h3>
+        <p>Type digits, operators, brackets and function shortcuts naturally. Enter calculates, Backspace deletes and Escape clears everything.</p>
+      </article>
+      <article class="fcard">
+        <div class="ficon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Searchable History Tape</h3>
+        <p>Every result is saved locally. Search, filter by mode, star favourites, reuse any line and export your tape as TXT or CSV.</p>
+      </article>
+      <article class="fcard">
+        <div class="ficon"><svg viewBox="0 0 24 24"><path d="M4 20h16M4 20L16 6"/><path d="M11 20a7 7 0 0 0-2.4-5.3"/></svg></div>
+        <h3>DEG/RAD Angle Toggle</h3>
+        <p>Flip between degrees and radians in one tap, with exact-zero handling for classic angles such as sin(180°) and cos(90°).</p>
+      </article>
+      <article class="fcard">
+        <div class="ficon"><svg viewBox="0 0 24 24"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></div>
+        <h3>Percentage &amp; Discount Solver</h3>
+        <p>Find X% of Y, work out what percent one number is of another, measure change, or get the final price after discount and tax.</p>
+      </article>
+      <article class="fcard">
+        <div class="ficon"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></div>
+        <h3>Programmer Base Converter</h3>
+        <p>Convert between DEC, HEX, OCT and BIN and run AND, OR, XOR, NOT, shifts and MOD with selectable 8 to 64-bit word sizes.</p>
+      </article>
+      <article class="fcard">
+        <div class="ficon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+        <h3>100% Private Browser Engine</h3>
+        <p>A safe tokenizer and parser runs entirely on your device. No sign-up, no unsafe eval(), and your history never leaves your browser.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 3-STEP GUIDE ======================= -->
+<section id="how" class="section" style="padding-top:10px">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Three steps. That's it.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Filter your calculator mode</h3><p>Pick Standard, Scientific, Percentage or Programmer, then set the angle unit, rounding and separators you need.</p></div>
+      <div class="step"><div class="num">2</div><h3>Type on your keyboard or click the keypad</h3><p>Use physical keys or the large touch-friendly buttons. A live preview shows the answer while you type.</p></div>
+      <div class="step"><div class="num">3</div><h3>Copy results or reuse from your history tape</h3><p>Copy the result or the full equation in one click, or tap any history line to bring it straight back.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= LONG-FORM GUIDE (SEO) ======================= -->
+<section id="guide" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Guide</span>
+      <h2>The complete guide to using an online calculator</h2>
+      <p>Order of operations, scientific functions, angle units, percentages, number bases and keyboard shortcuts, explained in plain language with examples you can try above.</p>
+    </div>
+
+    <article class="prose">
+      <p>A calculator looks simple, but getting reliable answers depends on understanding a handful of ideas: the order in which operations are performed, what each function key really does, how angles are measured, and how rounding affects what you see on screen. This guide walks through all of it using the same Standard, Scientific, Percentage and Programmer modes available in the AuraCalc workspace at the top of this page. Whether you are checking homework, pricing a sale, converting a hex colour or working through an engineering formula, you will find worked examples that you can type in right now and compare against the result.</p>
+
+      <h2 id="order-of-operations">Order of operations: PEMDAS and BODMAS explained</h2>
+      <p>When an expression contains more than one operation, a calculator cannot simply work from left to right. Mathematicians agreed on a fixed order of operations so that every expression has exactly one correct value. In the United States the order is taught as <strong>PEMDAS</strong> (Parentheses, Exponents, Multiplication and Division, Addition and Subtraction). In the United Kingdom, India and many other countries it is <strong>BODMAS</strong> (Brackets, Orders, Division and Multiplication, Addition and Subtraction). The two mnemonics describe exactly the same rules.</p>
+
+      <h3>The four levels of priority</h3>
+      <ol>
+        <li><strong>Parentheses first.</strong> Anything inside brackets is evaluated before the rest of the expression. Nested brackets are resolved from the innermost pair outward.</li>
+        <li><strong>Exponents and roots next.</strong> Powers such as x², x³ and xʸ, and roots such as √x and ∛x, bind more tightly than multiplication.</li>
+        <li><strong>Multiplication and division</strong> share one level and are performed from left to right.</li>
+        <li><strong>Addition and subtraction</strong> share the final level and are also performed from left to right.</li>
+      </ol>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Expression</th><th>Steps</th><th>Result</th></tr></thead>
+          <tbody>
+            <tr><td class="m">8 + 2 × 5</td><td>2 × 5 = 10, then 8 + 10</td><td class="m">18</td></tr>
+            <tr><td class="m">(8 + 2) × 5</td><td>brackets first: 10 × 5</td><td class="m">50</td></tr>
+            <tr><td class="m">100 ÷ 5 × 2</td><td>left to right: 20 × 2</td><td class="m">40</td></tr>
+            <tr><td class="m">2 + 3² × 4</td><td>3² = 9, 9 × 4 = 36, then 2 + 36</td><td class="m">38</td></tr>
+            <tr><td class="m">2^3^2</td><td>powers group from the right: 2^9</td><td class="m">512</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Negative numbers and exponents</h3>
+      <p>The expression −3² equals −9, because the exponent is applied before the minus sign. If you want the square of negative three, write (−3)² and the answer is 9. AuraCalc follows the same convention that textbooks and spreadsheet programs use, so typing <code>−3²</code> gives −9 while <code>(−3)²</code> gives 9.</p>
+
+      <h3>Implicit multiplication and the famous 6 ÷ 2(1 + 2) puzzle</h3>
+      <p>Viral math puzzles often hinge on implicit multiplication, where a number sits directly next to a bracket. Different calculators disagree about it. AuraCalc treats implicit multiplication exactly like ordinary multiplication and works from left to right, so <code>6 ÷ 2(1 + 2)</code> evaluates to 9. If you meant to divide by the whole product, add explicit brackets: <code>6 ÷ (2 × (1 + 2))</code> equals 1. Whenever an expression looks ambiguous, brackets are the cheapest insurance against a wrong answer.</p>
+
+      <h2 id="standard-memory">Standard calculator basics and memory keys</h2>
+      <p>Standard mode covers everyday arithmetic: addition, subtraction, multiplication, division, percentages and decimals. <strong>AC</strong> clears everything, <strong>⌫</strong> deletes the last character, <strong>+/−</strong> flips the sign of the number you are typing, and <strong>=</strong> finishes the calculation and stores it on the history tape. While you type, the large display shows a live preview of the running answer, so you can see the result before you press equals.</p>
+
+      <h3>Memory keys explained: MC, MR, M+, M− and MS</h3>
+      <p>The memory keys give you a scratch pad that survives between calculations, which is ideal for adding up several separate totals.</p>
+      <ul>
+        <li><strong>MS (memory store)</strong> replaces the memory with the current value.</li>
+        <li><strong>M+</strong> adds the current value to the number in memory.</li>
+        <li><strong>M−</strong> subtracts the current value from the number in memory.</li>
+        <li><strong>MR (memory recall)</strong> inserts the stored number into your current calculation.</li>
+        <li><strong>MC (memory clear)</strong> sets memory back to zero.</li>
+      </ul>
+      <p>Imagine you are totalling three receipts of 24.50, 18.75 and 9.99. Type <code>24.5</code> and press M+, type <code>18.75</code> and press M+, then <code>9.99</code> and M+. Press MR and the display shows 53.24. If one purchase is refunded, type <code>5</code> and press M− to bring the stored total down to 48.24. A small M badge on the display tells you whenever memory is holding a non-zero value, and the stored number stays until you press MC or reload the page.</p>
+
+      <h2 id="scientific-functions">How to use scientific calculator functions</h2>
+      <p>Scientific mode adds a function grid above the standard keypad. Function keys open a bracket automatically, so pressing <code>sin</code> followed by <code>30</code> and <code>)</code> builds <code>sin(30)</code>. If you press a function key right after finishing a calculation, the previous answer is wrapped inside the function, which makes it easy to chain operations.</p>
+
+      <h3>Trigonometry: sin, cos and tan</h3>
+      <p>Sine, cosine and tangent describe the relationships between the sides of a right-angled triangle. Sine is the opposite side divided by the hypotenuse, cosine is the adjacent side divided by the hypotenuse, and tangent is the opposite side divided by the adjacent side. They also describe waves, rotation and oscillation, which is why they appear in physics, engineering, music and computer graphics. The table below lists values you can verify in DEG mode.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Angle</th><th>sin</th><th>cos</th><th>tan</th></tr></thead>
+          <tbody>
+            <tr><td class="m">0°</td><td class="m">0</td><td class="m">1</td><td class="m">0</td></tr>
+            <tr><td class="m">30°</td><td class="m">0.5</td><td class="m">0.8660</td><td class="m">0.5774</td></tr>
+            <tr><td class="m">45°</td><td class="m">0.7071</td><td class="m">0.7071</td><td class="m">1</td></tr>
+            <tr><td class="m">60°</td><td class="m">0.8660</td><td class="m">0.5</td><td class="m">1.7321</td></tr>
+            <tr><td class="m">90°</td><td class="m">1</td><td class="m">0</td><td class="m">undefined</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Because tan(90°) is mathematically undefined, AuraCalc reports <strong>Invalid Domain</strong> instead of showing a huge meaningless number. It also snaps results that are zero in theory but not in floating-point arithmetic, so sin(180°) and cos(90°) correctly display 0.</p>
+
+      <h3>Inverse trigonometry: asin, acos and atan</h3>
+      <p>The inverse functions work backwards: you give them a ratio and they return the angle. In DEG mode, <code>asin(0.5)</code> returns 30 and <code>atan(1)</code> returns 45. Sine and cosine only produce values between −1 and 1, so asking for <code>asin(2)</code> or <code>acos(−3)</code> triggers an <strong>Invalid Domain</strong> message.</p>
+
+      <h3>Logarithms: log and ln</h3>
+      <p>A logarithm answers the question “what power produces this number?”. The <strong>log</strong> key uses base 10, so <code>log(1000)</code> is 3 and <code>log(100)</code> is 2. The <strong>ln</strong> key uses Euler's number e (about 2.71828) as its base, which makes <code>ln(e)</code> equal to 1. Logarithms are only defined for positive numbers, so <code>log(0)</code> and <code>ln(−5)</code> are invalid. To find a logarithm in any other base, divide two logarithms: log base 2 of 8 is <code>ln(8) ÷ ln(2)</code>, which equals 3.</p>
+
+      <h3>Exponents and roots: x², x³, xʸ, eˣ, 10ˣ, √x and ∛x</h3>
+      <p>The x² and x³ keys square and cube the number before them. The xʸ key raises any base to any power, so <code>2 xʸ 10</code> equals 1,024. The eˣ and 10ˣ keys are shortcuts for powers of e and 10, which are common in growth, decay and scientific notation: 10ˣ with x = 3 gives 1,000. Roots undo powers. <code>√144</code> equals 12, <code>∛27</code> equals 3, and the cube root works for negative numbers too, so <code>∛(−8)</code> equals −2. A square root of a negative number has no real answer and returns <strong>Invalid Domain</strong>.</p>
+
+      <h3>Factorials, constants and absolute value</h3>
+      <p>The factorial <strong>n!</strong> multiplies all whole numbers from 1 up to n. For example, 5! = 5 × 4 × 3 × 2 × 1 = 120, and by definition 0! = 1. Factorials count arrangements and appear in combinatorics: the number of ways to choose 3 items from 10 is <code>10! ÷ (3! × 7!)</code>, which equals 120. Factorial is defined only for non-negative whole numbers, and the result grows so fast that anything above 170! overflows the range of standard floating-point numbers, in which case AuraCalc shows <strong>Overflow</strong>.</p>
+      <p>The <strong>π</strong> and <strong>e</strong> keys insert high-precision constants. The area of a circle with radius 5 is <code>π × 5²</code>, or about 78.5398. The <strong>|x|</strong> key returns the absolute value, which is the distance of a number from zero, so |−7.5| equals 7.5.</p>
+
+      <h3>Understanding error messages</h3>
+      <ul>
+        <li><strong>Division by Zero</strong> appears for operations such as 5 ÷ 0 or 0^(−1).</li>
+        <li><strong>Invalid Domain</strong> means the input is outside what a function accepts, for example √(−1), log(0) or asin(2).</li>
+        <li><strong>Syntax Error</strong> means the expression cannot be parsed, such as unmatched or empty brackets.</li>
+        <li><strong>Overflow</strong> means the result is too large to represent.</li>
+      </ul>
+
+      <h2 id="degrees-radians">Degrees vs radians explained simply</h2>
+      <p>Degrees and radians are two units for the same thing: how far you have turned. A degree divides a full circle into 360 equal slices, a convention that dates back to ancient Babylonian mathematics. A radian is defined by the circle itself: one radian is the angle that creates an arc exactly as long as the circle's radius. Because the circumference of a circle is 2π times its radius, a full turn is 2π radians, and a half turn is π radians.</p>
+      <p>To convert degrees to radians, multiply by π ÷ 180. To convert radians to degrees, multiply by 180 ÷ π. One radian is therefore about 57.2958°, and one degree is about 0.0174533 radians.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Degrees</th><th>Radians (exact)</th><th>Radians (decimal)</th></tr></thead>
+          <tbody>
+            <tr><td class="m">30°</td><td class="m">π/6</td><td class="m">0.5236</td></tr>
+            <tr><td class="m">45°</td><td class="m">π/4</td><td class="m">0.7854</td></tr>
+            <tr><td class="m">90°</td><td class="m">π/2</td><td class="m">1.5708</td></tr>
+            <tr><td class="m">180°</td><td class="m">π</td><td class="m">3.1416</td></tr>
+            <tr><td class="m">270°</td><td class="m">3π/2</td><td class="m">4.7124</td></tr>
+            <tr><td class="m">360°</td><td class="m">2π</td><td class="m">6.2832</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><strong>Which one should I use?</strong> If the problem shows a degree symbol, choose DEG. If it mentions π, or comes from calculus or physics, choose RAD. Using the wrong unit is the most common reason for a wrong trigonometry answer: <code>sin(30)</code> is 0.5 in DEG mode but about −0.988 in RAD mode.</div>
+
+      <!-- ======================= AD SLOT: ARTICLE (In-Content 728x90 / 300x250) =======================
+           Paste your Adsterra in-content banner code INSIDE #ad-slot-article below. -->
+      <aside class="ad-wrap" aria-label="Advertisement">
+        <span class="ad-label">Advertisement</span>
+        <div id="ad-slot-article" class="ad-slot ad-article">
+          <!-- PASTE ADSTERRA 728x90 / 300x250 <script> TAG HERE -->
+        </div>
+      </aside>
+
+      <h2 id="percentages">Everyday percentage and discount formulas</h2>
+      <p>Percentages describe a part out of one hundred, and they show up in shopping, tipping, interest, grades and statistics. Percentage mode in AuraCalc has four filters that match the most common questions, each showing the formula and a step-by-step breakdown.</p>
+
+      <h3>What is X% of Y?</h3>
+      <p>Multiply the value by the percentage and divide by 100: <code>Y × X ÷ 100</code>. So 15% of 80 is 80 × 15 ÷ 100 = 12. A handy mental shortcut is to find 10% by moving the decimal point one place, then build up from there.</p>
+
+      <h3>X is what percent of Y?</h3>
+      <p>Divide the part by the whole and multiply by 100: <code>X ÷ Y × 100</code>. If you scored 12 out of 80, the percentage is 12 ÷ 80 × 100 = 15%.</p>
+
+      <h3>Percentage increase and decrease</h3>
+      <p>Subtract the old value from the new one, divide by the old value, and multiply by 100: <code>(new − old) ÷ old × 100</code>. Going from 80 to 100 is a 25% increase. Going back from 100 to 80 is a 20% decrease, not 25%, because the percentage is always measured against the starting value. This asymmetry explains why a 25% rise followed by a 25% fall leaves you below where you began: 100 becomes 125, then 93.75.</p>
+
+      <h3>Discounts, sales tax and final price</h3>
+      <p>Take the discount first, then add tax to the discounted price: <code>price × (1 − discount) × (1 + tax)</code>. A 120 item at 25% off costs 90, and adding 8% tax brings the final price to 97.20. Stacked discounts do not simply add up. A 20% discount followed by an extra 10% off is <code>1 − 0.8 × 0.9 = 0.28</code>, a 28% total saving rather than 30%.</p>
+
+      <h3>Reverse percentages, margins and percentage points</h3>
+      <p>To find an original price from a sale price, divide by the remaining fraction. If an item costs 64 after a 20% discount, the original price was 64 ÷ 0.8 = 80. Business owners should also separate markup from margin. With a cost of 60 and a selling price of 100, the markup is (100 − 60) ÷ 60 = 66.7%, while the margin is (100 − 60) ÷ 100 = 40%. Finally, remember that percentage points and percent are different things: moving from 10% to 12% is a rise of 2 percentage points, but a 20% relative increase.</p>
+
+      <h3>Using the % key in Standard mode</h3>
+      <p>In Standard and Scientific modes the % key follows the familiar pocket-calculator behaviour. Typing <code>200 + 10 %</code> adds ten percent of 200 and returns 220, <code>200 − 15 %</code> returns 170, and <code>50 × 10 %</code> returns 5. On its own, <code>50 %</code> is simply 0.5.</p>
+
+      <h2 id="number-bases">Binary, hexadecimal and octal numbers</h2>
+      <p>People count in base 10 because we have ten fingers, but computers work in base 2 because electronic switches have two states. A positional number system assigns each digit a weight that is a power of the base. In decimal the weights are 1, 10, 100 and so on. In binary they are 1, 2, 4, 8 and so on. Hexadecimal (base 16) adds the letters A to F for the values 10 to 15, and octal (base 8) uses the digits 0 to 7. Programmer mode shows any value in all four bases at once.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>DEC</th><th>HEX</th><th>OCT</th><th>BIN</th></tr></thead>
+          <tbody>
+            <tr><td class="m">2</td><td class="m">2</td><td class="m">2</td><td class="m">10</td></tr>
+            <tr><td class="m">8</td><td class="m">8</td><td class="m">10</td><td class="m">1000</td></tr>
+            <tr><td class="m">10</td><td class="m">A</td><td class="m">12</td><td class="m">1010</td></tr>
+            <tr><td class="m">15</td><td class="m">F</td><td class="m">17</td><td class="m">1111</td></tr>
+            <tr><td class="m">16</td><td class="m">10</td><td class="m">20</td><td class="m">10000</td></tr>
+            <tr><td class="m">255</td><td class="m">FF</td><td class="m">377</td><td class="m">11111111</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Converting by hand</h3>
+      <p>To convert hexadecimal FF to decimal, multiply each digit by its weight: 15 × 16 + 15 = 255. To convert decimal 45 to binary, break it into powers of two: 32 + 8 + 4 + 1, which is 101101. Hexadecimal is popular with programmers because each hex digit maps to exactly four bits, so 0xB7 is simply 1011 0111 in binary. In Programmer mode you can skip the arithmetic: type a number in the active base and read the other three bases instantly, or switch base to convert the value you are working on.</p>
+
+      <h3>Bitwise operations: AND, OR, XOR, NOT and shifts</h3>
+      <p>Bitwise operators work on the individual bits of whole numbers. Using 12 (binary 1100) and 10 (binary 1010):</p>
+      <ul>
+        <li><code>12 AND 10</code> keeps bits that are set in both numbers and gives 8 (1000).</li>
+        <li><code>12 OR 10</code> keeps bits set in either number and gives 14 (1110).</li>
+        <li><code>12 XOR 10</code> keeps bits set in exactly one number and gives 6 (0110).</li>
+        <li><code>NOT 5</code> flips every bit and gives −6 in two's complement arithmetic.</li>
+        <li><code>1 &lt;&lt; 4</code> shifts bits left and gives 16, while <code>256 &gt;&gt; 2</code> shifts right and gives 64.</li>
+      </ul>
+      <p>Masks are a classic use case. <code>FF AND 0F</code> in hexadecimal returns 0F, which isolates the low four bits of a byte.</p>
+
+      <h3>Word size, wrap-around and integer division</h3>
+      <p>Real processors store integers in a fixed number of bits. The word size filter lets you choose 8, 16, 32 or 64 bits. Results that do not fit wrap around using two's complement, exactly as they would in hardware, so in 8-bit mode 127 + 1 becomes −128. Negative values are displayed in HEX, OCT and BIN as their unsigned bit patterns. Division in Programmer mode is whole-number division that truncates toward zero, so 7 ÷ 2 equals 3, and the <strong>MOD</strong> key returns the remainder, so 7 MOD 2 equals 1.</p>
+
+      <h3>Where number bases show up in real life</h3>
+      <ul>
+        <li><strong>Web colours:</strong> #FF8800 means red 255, green 136 (hex 88) and blue 0.</li>
+        <li><strong>File permissions:</strong> the Unix permission 755 is octal, which expands to the bit groups 111 101 101.</li>
+        <li><strong>Networking:</strong> the subnet octet 255 is 11111111 in binary, eight bits all set.</li>
+      </ul>
+
+      <h2 id="rounding-precision">Rounding, precision and floating-point numbers</h2>
+      <p>Computers store most decimal fractions as binary approximations. In many programming languages, 0.1 + 0.2 produces 0.30000000000000004 because neither 0.1 nor 0.2 can be written exactly in binary. AuraCalc rounds its working results to 15 significant digits, which removes this noise from everyday sums while still being far more precise than you will need for most tasks.</p>
+      <p>The <strong>Rounding</strong> filter controls how a finished answer is displayed and copied:</p>
+      <ul>
+        <li><strong>Auto / Exact</strong> shows up to 15 significant digits and switches to scientific notation for extremely large or small values.</li>
+        <li><strong>2 Decimals</strong> is ideal for money.</li>
+        <li><strong>4 and 6 Decimals</strong> suit measurements, rates and scientific work.</li>
+        <li><strong>Scientific Notation (E)</strong> shows values such as 6.022E+23, handy for physics and chemistry.</li>
+      </ul>
+      <p>These filters change only the displayed text. The underlying full-precision number is still used if you continue calculating, so choosing 2 Decimals will not introduce compounding rounding errors. The <strong>Thousands separator</strong> switch adds commas for readability, for example 1,250,000.50. Turn it off before copying results into a spreadsheet, script or database, where 1250000.50 is safer to paste.</p>
+
+      <h2 id="shortcuts">Keyboard shortcut reference</h2>
+      <p>You never need to touch the mouse. Click inside the calculator or press <strong>Start Calculating</strong>, then type. Shortcuts work whenever the calculator is on screen and you are not typing in a text field.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Key</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td class="m">0 – 9</td><td class="wrap">Enter digits</td></tr>
+            <tr><td class="m">.</td><td class="wrap">Decimal point</td></tr>
+            <tr><td class="m">+ − * /</td><td class="wrap">Add, subtract, multiply, divide</td></tr>
+            <tr><td class="m">( )</td><td class="wrap">Open and close brackets</td></tr>
+            <tr><td class="m">^</td><td class="wrap">Power (xʸ) in Standard and Scientific modes, XOR in Programmer mode</td></tr>
+            <tr><td class="m">!</td><td class="wrap">Factorial</td></tr>
+            <tr><td class="m">%</td><td class="wrap">Percent in Standard and Scientific modes, MOD in Programmer mode</td></tr>
+            <tr><td class="m">Enter or =</td><td class="wrap">Calculate the result</td></tr>
+            <tr><td class="m">Backspace</td><td class="wrap">Delete the last character</td></tr>
+            <tr><td class="m">Escape or Delete</td><td class="wrap">All Clear</td></tr>
+            <tr><td class="m">P / E</td><td class="wrap">Insert π / e (Scientific)</td></tr>
+            <tr><td class="m">S / C / T</td><td class="wrap">sin( / cos( / tan( (Scientific)</td></tr>
+            <tr><td class="m">L / N / R</td><td class="wrap">log( / ln( / √( (Scientific)</td></tr>
+            <tr><td class="m">A – F</td><td class="wrap">Hex digits (Programmer mode, HEX base)</td></tr>
+            <tr><td class="m">&amp; | ~ &lt; &gt;</td><td class="wrap">AND, OR, NOT, shift left, shift right (Programmer)</td></tr>
+            <tr><td class="m">Ctrl/⌘ + V</td><td class="wrap">Paste a numeric expression into the calculator</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Putting it all together</h2>
+      <p>The fastest way to get reliable answers is to build a few habits. Choose the mode that matches the problem, check whether the angle unit is DEG or RAD before any trigonometry, add brackets whenever an expression could be read two ways, and use the live preview to catch typos before you press equals. Star the calculations you rely on so they are one click away on the history tape, and export the tape as a TXT or CSV file when you need a record of your working. With those habits, a free browser calculator can handle everything from a quick tip to a university physics problem.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Frequently asked questions</h2>
+      <p>Quick answers about shortcuts, functions, angle modes, privacy and precision.</p>
+    </div>
+    <div class="faq" id="faq-list">
+      <details><summary>What keyboard shortcuts does the calculator support?</summary><div class="ans"><p>Type digits 0–9, a decimal point, + − * / for arithmetic, ( and ) for brackets, ^ for powers, ! for factorial and % for percent. Press Enter or = to calculate, Backspace to delete the last character and Escape to clear everything. In Scientific mode you can also press P for π, E for Euler's number, S, C and T for sin, cos and tan, L for log, N for ln and R for square root.</p></div></details>
+      <details><summary>Which scientific functions are included?</summary><div class="ans"><p>Scientific mode includes sin, cos, tan, asin, acos and atan, base-10 and natural logarithms, squares, cubes, any power, eˣ and 10ˣ, square and cube roots, factorial, absolute value, the constants π and e, a 1/x reciprocal key, an Ans key and nested parentheses.</p></div></details>
+      <details><summary>What is the difference between DEG and RAD?</summary><div class="ans"><p>DEG measures angles in degrees, where a full circle is 360°, while RAD measures them in radians, where a full circle is 2π. Use DEG for everyday geometry and RAD for calculus and physics. For example, sin(30) equals 0.5 in DEG mode but about −0.988 in RAD mode.</p></div></details>
+      <details><summary>Is my calculation history private?</summary><div class="ans"><p>Yes. The history tape is stored only in your own browser using localStorage. Nothing is uploaded to a server, and you can delete single entries or press Clear History at any time. Clearing your browser data also removes it.</p></div></details>
+      <details><summary>How do I change decimal rounding and precision?</summary><div class="ans"><p>Use the Rounding filter above the display to choose Auto / Exact, 2, 4 or 6 decimals, or scientific notation. Rounding only changes how the answer is shown and copied; the full-precision value is still used if you keep calculating. In Auto mode results show up to 15 significant digits.</p></div></details>
+      <details><summary>Does the calculator work on mobile phones and tablets?</summary><div class="ans"><p>Yes. The layout is responsive, the keys are large enough for thumbs, and the history tape becomes a collapsible drawer on small screens. Because all calculations run locally in your browser, it stays fast even on slow connections.</p></div></details>
+      <details><summary>How do I calculate percentages and discounts?</summary><div class="ans"><p>Switch to Percentage mode and pick a filter: what is X% of Y, X is what % of Y, percentage increase or decrease, or final price after discount and tax. Enter your numbers and the answer, formula and breakdown update instantly. In Standard mode you can also type 200 + 10 % to add ten percent to 200.</p></div></details>
+      <details><summary>What do MC, MR, M+, M− and MS do?</summary><div class="ans"><p>MS stores the current value in memory, M+ adds it to the stored value and M− subtracts it. MR recalls the stored number into your calculation and MC clears memory. An M badge appears on the display while memory holds a non-zero value.</p></div></details>
+      <details><summary>How does Programmer mode convert between number bases?</summary><div class="ans"><p>Choose DEC, HEX, OCT or BIN and the display shows the current value in all four bases at once. Type in the active base, switch bases at any time to convert, and use AND, OR, XOR, NOT, shifts and MOD on whole numbers within the 8, 16, 32 or 64-bit word size you select.</p></div></details>
+      <details><summary>Is the calculator free, and is it accurate?</summary><div class="ans"><p>It is completely free, with no sign-up or install. The expression parser follows the standard order of operations (PEMDAS/BODMAS), avoids unsafe eval(), and reports clear errors such as Division by Zero, Invalid Domain and Syntax Error instead of guessing.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= AD SLOT: FOOTER (Bottom Banner) =======================
+     Paste your Adsterra banner code INSIDE #ad-slot-footer below. -->
+<div class="container">
+  <aside class="ad-wrap" aria-label="Advertisement">
+    <span class="ad-label">Advertisement</span>
+    <div id="ad-slot-footer" class="ad-slot ad-footer">
+      <!-- PASTE ADSTERRA 728x90 / 320x50 <script> TAG HERE -->
+    </div>
+  </aside>
+</div>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="2.8" width="15" height="18.4" rx="3.2"/><rect x="7.5" y="5.8" width="9" height="3.4" rx="1" fill="#fff" stroke="none"/><path d="M8.2 13h.01M12 13h.01M15.8 13h.01M8.2 17h.01M12 17h.01M15.8 17h.01" stroke-width="2.2"/></svg></span>AuraCalc</a>
+        <p>A free, instant online calculator for everyday arithmetic, scientific functions, percentages and number bases. Built to be fast, accurate and private.</p>
+      </div>
+      <div>
+        <h4>Calculator modes</h4>
+        <ul>
+          <li><a href="#calculator" data-mode-link="standard">Standard Calculator</a></li>
+          <li><a href="#calculator" data-mode-link="scientific">Scientific Calculator</a></li>
+          <li><a href="#calculator" data-mode-link="percentage">Percentage &amp; Discount</a></li>
+          <li><a href="#calculator" data-mode-link="programmer">Programmer / Base Converter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="#shortcuts">Keyboard shortcut reference</a></li>
+          <li><a href="#order-of-operations">Order of operations</a></li>
+          <li><a href="#degrees-radians">Degrees vs radians</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div id="privacy">
+        <h4>Privacy &amp; Terms</h4>
+        <p style="margin-top:0">Your calculations and history stay in your browser and are never sent to our servers. This site may show ads from third-party networks, which can use cookies, and may use anonymous analytics to improve the page.</p>
+        <p id="terms">AuraCalc is provided as is, without warranty. Please double-check critical financial, medical or engineering results independently.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="yr">2026</span> AuraCalc. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="sr-only" id="sr-live" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+'use strict';
+
+/* =====================================================================
+   ENGINE: pure functions (tokenizer, parser, evaluators, formatters).
+   No eval(), no Function(): expressions are tokenized and parsed by hand.
+   ===================================================================== */
+/*ENGINE-START*/
+class CalcError extends Error { constructor(m) { super(m); this.name = 'CalcError'; } }
+const ERR = { syntax: 'Syntax Error', div0: 'Division by Zero', domain: 'Invalid Domain', overflow: 'Overflow' };
+
+// Round to 15 significant digits: removes binary noise such as 0.1 + 0.2 = 0.30000000000000004
+const cl = v => (Number.isFinite(v) && v !== 0) ? parseFloat(v.toPrecision(15)) : v;
+const snap = v => (Math.abs(v) < 1e-15 ? 0 : v);
+
+const FN_RE = /^(asin|acos|atan|sin|cos|tan|log|ln|abs|sqrt|cbrt)/;
+const OPMAP = { '+': '+', '-': '−', '−': '−', '–': '−', '×': '×', '*': '×', '÷': '÷', '/': '÷', '^': '^', '(': '(', ')': ')', '!': '!', '%': '%', '²': '²', '³': '³' };
+
+function tokenize(s) {
+  const out = []; let i = 0;
+  while (i < s.length) {
+    const ch = s[i], rest = s.slice(i); let m;
+    if (/\s/.test(ch)) { i++; continue; }
+    if (/[0-9.]/.test(ch)) {
+      m = /^(?:\d+\.?\d*|\.\d+)(?:E[+-]?\d+)?/.exec(rest);
+      if (!m) throw new CalcError(ERR.syntax);
+      i += m[0].length;
+      if (s[i] === '.') throw new CalcError(ERR.syntax);
+      out.push({ t: 'num', v: parseFloat(m[0]) }); continue;
+    }
+    if (ch === 'π') { out.push({ t: 'const', v: 'pi' }); i++; continue; }
+    if (rest.startsWith('pi')) { out.push({ t: 'const', v: 'pi' }); i += 2; continue; }
+    if (rest.startsWith('Ans')) { out.push({ t: 'const', v: 'ans' }); i += 3; continue; }
+    if (ch === 'e') { out.push({ t: 'const', v: 'e' }); i++; continue; }
+    if (ch === '√') { out.push({ t: 'fn', v: 'sqrt' }); i++; continue; }
+    if (ch === '∛') { out.push({ t: 'fn', v: 'cbrt' }); i++; continue; }
+    m = FN_RE.exec(rest);
+    if (m) { out.push({ t: 'fn', v: m[1] }); i += m[1].length; continue; }
+    if (OPMAP[ch]) { out.push({ t: 'op', v: OPMAP[ch] }); i++; continue; }
+    throw new CalcError(ERR.syntax);
+  }
+  return out;
+}
+
+// Recursive-descent parser. Precedence (low to high):
+//   + −   <   × ÷ (and implicit multiplication)   <   unary −   <   ^ (right-assoc)   <   ! % ² ³   <   primary
+function parse(tk) {
+  let p = 0;
+  const peek = () => tk[p];
+  const isOp = v => { const t = tk[p]; return !!t && t.t === 'op' && t.v === v; };
+  const startsPrimary = t => !!t && (t.t === 'num' || t.t === 'const' || t.t === 'fn' || (t.t === 'op' && t.v === '('));
+
+  function expr() {
+    let a = term();
+    while (isOp('+') || isOp('−')) { const op = tk[p++].v; const b = term(); a = { k: 'bin', op, a, b }; }
+    return a;
+  }
+  function term() {
+    let a = unary();
+    for (;;) {
+      if (isOp('×') || isOp('÷')) { const op = tk[p++].v; const b = unary(); a = { k: 'bin', op, a, b }; }
+      else if (startsPrimary(peek())) { const b = unary(); a = { k: 'bin', op: '×', a, b }; }
+      else break;
+    }
+    return a;
+  }
+  function unary() {
+    if (isOp('−')) { p++; return { k: 'neg', a: unary() }; }
+    if (isOp('+')) { p++; return unary(); }
+    return power();
+  }
+  function power() {
+    const base = postfix();
+    if (isOp('^')) { p++; return { k: 'bin', op: '^', a: base, b: unary() }; }
+    return base;
+  }
+  function postfix() {
+    let a = primary();
+    for (;;) {
+      const t = peek();
+      if (t && t.t === 'op' && (t.v === '!' || t.v === '²' || t.v === '³')) { p++; a = { k: 'post', op: t.v, a }; }
+      else if (t && t.t === 'op' && t.v === '%') { p++; a = { k: 'pct', a }; }
+      else break;
+    }
+    return a;
+  }
+  function close() { if (isOp(')')) p++; else if (p < tk.length) throw new CalcError(ERR.syntax); }
+  function primary() {
+    const t = tk[p++];
+    if (!t) throw new CalcError(ERR.syntax);
+    if (t.t === 'num') return { k: 'num', v: t.v };
+    if (t.t === 'const') return { k: 'const', name: t.v };
+    if (t.t === 'fn') {
+      if (isOp('(')) { p++; const a = expr(); close(); return { k: 'fn', name: t.v, a }; }
+      return { k: 'fn', name: t.v, a: unary() };
+    }
+    if (t.t === 'op' && t.v === '(') { const a = expr(); close(); return a; }
+    throw new CalcError(ERR.syntax);
+  }
+  const ast = expr();
+  if (p < tk.length) throw new CalcError(ERR.syntax);
+  return ast;
+}
+
+function fact(n) {
+  if (!Number.isInteger(n) || n < 0) throw new CalcError(ERR.domain);
+  if (n > 170) return Infinity;
+  let r = 1; for (let i = 2; i <= n; i++) r *= i;
+  return r;
+}
+
+function callFn(name, x, cx) {
+  const rad = cx.deg ? x * Math.PI / 180 : x;
+  const back = v => (cx.deg ? v * 180 / Math.PI : v);
+  switch (name) {
+    case 'sin': return snap(Math.sin(rad));
+    case 'cos': return snap(Math.cos(rad));
+    case 'tan':
+      if (Math.abs(Math.cos(rad)) < 1e-15) throw new CalcError(ERR.domain);
+      return snap(Math.tan(rad));
+    case 'asin': if (x < -1 || x > 1) throw new CalcError(ERR.domain); return back(Math.asin(x));
+    case 'acos': if (x < -1 || x > 1) throw new CalcError(ERR.domain); return back(Math.acos(x));
+    case 'atan': return back(Math.atan(x));
+    case 'log': if (x <= 0) throw new CalcError(ERR.domain); return Math.log10(x);
+    case 'ln': if (x <= 0) throw new CalcError(ERR.domain); return Math.log(x);
+    case 'sqrt': if (x < 0) throw new CalcError(ERR.domain); return Math.sqrt(x);
+    case 'cbrt': return Math.cbrt(x);
+    case 'abs': return Math.abs(x);
+  }
+  throw new CalcError(ERR.syntax);
+}
+
+function ev(n, cx) {
+  switch (n.k) {
+    case 'num': return n.v;
+    case 'const': return n.name === 'pi' ? Math.PI : n.name === 'e' ? Math.E : cx.ans;
+    case 'neg': return -ev(n.a, cx);
+    case 'pct': return ev(n.a, cx) / 100;
+    case 'post': {
+      const a = ev(n.a, cx);
+      if (n.op === '²') return a * a;
+      if (n.op === '³') return a * a * a;
+      return fact(a);
+    }
+    case 'fn': return cl(callFn(n.name, ev(n.a, cx), cx));
+    case 'bin': {
+      const a = ev(n.a, cx);
+      if (n.op === '+' || n.op === '−') {
+        // "200 + 10%" means 200 + 10% of 200
+        const b = n.b.k === 'pct' ? a * ev(n.b.a, cx) / 100 : ev(n.b, cx);
+        return cl(n.op === '+' ? a + b : a - b);
+      }
+      const b = ev(n.b, cx);
+      if (n.op === '×') return cl(a * b);
+      if (n.op === '÷') { if (b === 0) throw new CalcError(ERR.div0); return cl(a / b); }
+      if (a === 0 && b < 0) throw new CalcError(ERR.div0);
+      const r = Math.pow(a, b);
+      if (Number.isNaN(r)) throw new CalcError(ERR.domain);
+      return cl(r);
+    }
+  }
+  throw new CalcError(ERR.syntax);
+}
+
+function evaluate(str, cx) {
+  const tk = tokenize(str);
+  if (!tk.length) throw new CalcError(ERR.syntax);
+  const v = ev(parse(tk), cx || { deg: true, ans: 0 });
+  if (Number.isNaN(v)) throw new CalcError(ERR.domain);
+  if (!Number.isFinite(v)) throw new CalcError(ERR.overflow);
+  const r = cl(v);
+  return r === 0 ? 0 : r;
+}
+
+// Strip trailing operators / dangling function openers so a half-typed expression can still preview
+const TRAIL_RE = /(?:asin\(|acos\(|atan\(|sin\(|cos\(|tan\(|log\(|ln\(|√\(|∛\(|abs\(|e\^\(|10\^\(|1÷\(|\(|[+−×÷^])$/;
+function trimIncomplete(s) { let prev; do { prev = s; s = s.replace(TRAIL_RE, ''); } while (s !== prev); return s; }
+
+/* ---------- number formatting ---------- */
+function groupStr(s) {
+  return s.replace(/^([−-]?)(\d+)/, (m, sg, i) => sg + i.replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+}
+function sci(n) {
+  if (n === 0) return '0';
+  const parts = n.toExponential(9).split('e');
+  return parts[0].replace(/\.?0+$/, '') + 'E' + parts[1];
+}
+function formatNumber(n, o) {
+  o = o || {};
+  if (!Number.isFinite(n)) return String(n);
+  if (n === 0) n = 0;
+  const a = Math.abs(n), mode = o.round || 'auto';
+  let s;
+  if (mode === 'sci') return sci(cl(n));
+  if (mode === 'auto') {
+    if (a >= 1e15 || (a > 0 && a < 1e-6)) return sci(cl(n));
+    s = String(cl(n));
+  } else {
+    if (a >= 1e21) return sci(n);
+    s = n.toFixed(parseInt(mode, 10));
+    if (/^-0(\.0+)?$/.test(s)) s = s.slice(1);
+  }
+  return o.sep ? groupStr(s) : s;
+}
+// Plain, full-precision, exponent-free string (used when a result is fed back into an expression)
+function plain(n) {
+  n = cl(n);
+  if (n === 0) return '0';
+  const s = String(n);
+  if (!/e/i.test(s)) return s.replace(/^-/, '−');
+  const parts = s.toLowerCase().split('e'), ex = parseInt(parts[1], 10);
+  const neg = parts[0][0] === '-', md = parts[0].replace('-', '');
+  const ip = md.split('.')[0], fp = md.split('.')[1] || '';
+  const digits = ip + fp, pos = ip.length + ex;
+  let out;
+  if (pos <= 0) out = '0.' + '0'.repeat(-pos) + digits;
+  else if (pos >= digits.length) out = digits + '0'.repeat(pos - digits.length);
+  else out = digits.slice(0, pos) + '.' + digits.slice(pos);
+  return (neg ? '−' : '') + out;
+}
+function prettyExpr(e, grp) {
+  let out = '';
+  for (let i = 0; i < e.length; i++) {
+    const c = e[i], prev = e[i - 1];
+    if ((c === '+' || c === '−' || c === '×' || c === '÷') && i > 0 && !/[(+−×÷^]/.test(prev)) out += ' ' + c + ' ';
+    else out += c;
+  }
+  return grp ? out.replace(/\d+(?:\.\d*)?/g, m => groupStr(m)) : out;
+}
+
+/* ---------- programmer (BigInt) engine ---------- */
+const PROG_WORDS = new Set(['AND', 'OR', 'XOR', 'NOT', 'MOD']);
+function parseBase(u, base) {
+  if (!u.length) throw new CalcError(ERR.syntax);
+  let v = 0n; const B = BigInt(base);
+  for (const c of u) {
+    const d = parseInt(c, 36);
+    if (Number.isNaN(d) || d >= base) throw new CalcError(ERR.syntax);
+    v = v * B + BigInt(d);
+  }
+  return v;
+}
+function progEval(str, base, bits) {
+  const toks = []; let i = 0;
+  const SYM = { '+': '+', '−': '-', '-': '-', '×': '*', '*': '*', '÷': '/', '/': '/', '%': 'MOD', '&': 'AND', '|': 'OR', '^': 'XOR', '~': 'NOT', '(': '(', ')': ')' };
+  while (i < str.length) {
+    const ch = str[i];
+    if (/\s/.test(ch)) { i++; continue; }
+    if (ch === '<' && str[i + 1] === '<') { toks.push('<<'); i += 2; continue; }
+    if (ch === '>' && str[i + 1] === '>') { toks.push('>>'); i += 2; continue; }
+    if (/[0-9A-Za-z]/.test(ch)) {
+      let j = i; while (j < str.length && /[0-9A-Za-z]/.test(str[j])) j++;
+      const u = str.slice(i, j).toUpperCase(); i = j;
+      if (PROG_WORDS.has(u)) toks.push(u); else toks.push({ n: parseBase(u, base) });
+      continue;
+    }
+    if (SYM[ch]) { toks.push(SYM[ch]); i++; continue; }
+    throw new CalcError(ERR.syntax);
+  }
+  let p = 0;
+  const pk = () => toks[p], nx = () => toks[p++];
+  const isT = (...a) => typeof pk() === 'string' && a.includes(pk());
+  const W = v => BigInt.asIntN(bits, v);
+  function lvl(sub, ops, apply) {
+    return function () { let a = sub(); while (isT(...ops)) { const op = nx(); const b = sub(); a = apply(op, a, b); } return a; };
+  }
+  function unary() {
+    if (isT('-')) { nx(); return W(-unary()); }
+    if (isT('+')) { nx(); return unary(); }
+    if (isT('NOT')) { nx(); return W(~unary()); }
+    return primary();
+  }
+  function primary() {
+    const t = nx();
+    if (t === undefined) throw new CalcError(ERR.syntax);
+    if (typeof t === 'object') return W(t.n);
+    if (t === '(') { const v = or(); if (isT(')')) nx(); else if (pk() !== undefined) throw new CalcError(ERR.syntax); return v; }
+    throw new CalcError(ERR.syntax);
+  }
+  const mul = lvl(unary, ['*', '/', 'MOD'], (op, a, b) => {
+    if (op === '*') return W(a * b);
+    if (b === 0n) throw new CalcError(ERR.div0);
+    return W(op === '/' ? a / b : a % b);
+  });
+  const add = lvl(mul, ['+', '-'], (op, a, b) => W(op === '+' ? a + b : a - b));
+  const shift = lvl(add, ['<<', '>>'], (op, a, b) => {
+    if (b < 0n || b > 1024n) throw new CalcError(ERR.domain);
+    return W(op === '<<' ? a << b : a >> b);
+  });
+  const and = lvl(shift, ['AND'], (o, a, b) => W(a & b));
+  const xor = lvl(and, ['XOR'], (o, a, b) => W(a ^ b));
+  const or = lvl(xor, ['OR'], (o, a, b) => W(a | b));
+  const v = or();
+  if (p < toks.length) throw new CalcError(ERR.syntax);
+  return v;
+}
+const PTRAIL = /(?:\s*(?:\+|−|-|×|÷|MOD|AND|OR|XOR|<<|>>)\s*|NOT\s*|\()$/;
+function trimProgIncomplete(s) { let prev; do { prev = s; s = s.replace(PTRAIL, ''); } while (s !== prev); return s; }
+function fmtBig(v, base, bits, group) {
+  let s;
+  if (base === 10) {
+    s = v.toString(10);
+    if (group) s = s.replace(/^(-?)(\d+)$/, (m, sg, i) => sg + i.replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+  } else {
+    const u = v < 0n ? BigInt.asUintN(bits, v) : v;
+    s = u.toString(base).toUpperCase();
+    if (group) { const g = base === 8 ? 3 : 4; s = s.replace(new RegExp('\\B(?=(?:[0-9A-F]{' + g + '})+$)', 'g'), ' '); }
+  }
+  return s;
+}
+/*ENGINE-END*/
+
+/* =====================================================================
+   UI
+   ===================================================================== */
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* storage unavailable */ } }
+};
+const SET_KEY = 'omnicalc.settings.v1', HIST_KEY = 'omnicalc.history.v1';
+const MODES = ['standard', 'scientific', 'percentage', 'programmer'];
+const TAGS = { standard: 'Standard', scientific: 'Scientific', percentage: 'Percentage', programmer: 'Programmer' };
+const BASE_NAME = { 10: 'DEC', 16: 'HEX', 8: 'OCT', 2: 'BIN' };
+
+/* ---------- settings ---------- */
+const S = Object.assign({ mode: 'standard', angle: 'deg', round: 'auto', sep: true, bits: 64, base: 10, hf: 'all' }, store.get(SET_KEY, {}));
+if (!MODES.includes(S.mode)) S.mode = 'standard';
+if (!['deg', 'rad'].includes(S.angle)) S.angle = 'deg';
+S.round = String(S.round); if (!['auto', '2', '4', '6', 'sci'].includes(S.round)) S.round = 'auto';
+S.sep = S.sep !== false;
+S.bits = +S.bits; if (![8, 16, 32, 64].includes(S.bits)) S.bits = 64;
+S.base = +S.base; if (![2, 8, 10, 16].includes(S.base)) S.base = 10;
+if (!['all', 'standard', 'scientific', 'percentage', 'programmer', 'starred'].includes(S.hf)) S.hf = 'all';
+const saveSettings = () => store.set(SET_KEY, S);
+const fmtOpts = () => ({ round: S.round, sep: S.sep });
+const fmt = n => formatNumber(n, fmtOpts());
+const nfmt = n => formatNumber(n, { round: 'auto', sep: S.sep });
+const groupTyped = s => (S.sep ? groupStr(s) : s);
+const asCopy = s => String(s).replace(/−/g, '-');
+const ctx = () => ({ deg: S.angle === 'deg', ans: C.ans });
+
+/* ---------- state ---------- */
+const C = { expr: '', done: false, err: null, ans: 0, mem: 0 };
+const G = { expr: '', done: false, err: null, val: 0n, pv: 0n };
+const P = { sub: 'of', res: null, vals: { of: { x: '15', y: '80' }, is: { x: '12', y: '80' }, chg: { a: '80', b: '100' }, disc: { p: '120', d: '25', t: '8' } } };
+let hist = store.get(HIST_KEY, []);
+if (!Array.isArray(hist)) hist = [];
+hist = hist.filter(h => h && typeof h === 'object' && typeof h.expr === 'string' && typeof h.result === 'string' && TAGS[h.mode]).slice(0, 300);
+
+const el = {
+  ws: $('#workspace'), top: $('#disp-top'), main: $('#disp-main'), res: $('#disp-res'), badges: $('#badges'),
+  hlist: $('#hist-list'), hcount: $('#hist-count'), hsearch: $('#hist-search')
+};
+
+/* ---------- toast / clipboard ---------- */
+let toastT;
+function toast(msg, warn) {
+  const t = $('#toast'); t.textContent = msg; t.classList.toggle('warn', !!warn); t.classList.add('show');
+  clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 1800);
+}
+const announce = msg => { $('#sr-live').textContent = msg; };
+function fallbackCopy(text) {
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:-1000px;opacity:0';
+    document.body.appendChild(ta); ta.select();
+    const ok = document.execCommand('copy'); document.body.removeChild(ta);
+    if (!ok) toast('Copy failed. Please select and copy manually.', true);
+    return ok;
+  } catch (e) { toast('Copy failed', true); return false; }
+}
+function copyText(text, okMsg) {
+  if (!text) { toast('Nothing to copy yet', true); return; }
+  const done = () => toast(okMsg || 'Copied!');
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, () => { if (fallbackCopy(text)) done(); });
+  else if (fallbackCopy(text)) done();
+}
+
+/* =====================================================================
+   STANDARD / SCIENTIFIC input logic
+   ===================================================================== */
+const needsMul = e => /[\d.)!%²³πe]$|Ans$/.test(e);
+const FN_TAIL = /(?:asin\(|acos\(|atan\(|sin\(|cos\(|tan\(|log\(|ln\(|√\(|∛\(|abs\(|1÷\(|Ans)$/;
+const startNew = () => { if (C.err || C.done) { C.expr = ''; C.err = null; C.done = false; } };
+
+function cDigit(d) {
+  startNew();
+  if (d === '.') {
+    const tail = /[\d.]*$/.exec(C.expr)[0];
+    if (tail.includes('.')) return;
+    if (/\d$/.test(C.expr)) { C.expr += '.'; return; }
+    if (needsMul(C.expr)) C.expr += '×';
+    C.expr += '0.'; return;
+  }
+  if (/[\d.]$/.test(C.expr)) {
+    const tail = /[\d.]*$/.exec(C.expr)[0];
+    if (tail === '0') C.expr = C.expr.slice(0, -1) + d; else C.expr += d;
+    return;
+  }
+  if (needsMul(C.expr)) C.expr += '×';
+  C.expr += d;
+}
+function cOp(o) {
+  if (C.err) { C.err = null; C.expr = ''; C.done = false; }
+  if (C.done) { C.expr = plain(C.ans); C.done = false; }
+  const e = C.expr;
+  if (e === '') {
+    if (o === '−') C.expr = '−';
+    else if (o !== '+') C.expr = plain(C.ans) + o;
+    return;
+  }
+  const last = e.slice(-1);
+  if (last === '(') { if (o === '−') C.expr += o; return; }
+  if (/[+−×÷^]/.test(last)) {
+    if (o === '−' && /[×÷^]/.test(last)) { C.expr += o; return; }
+    const t = e.replace(/[+−×÷^]+$/, '');
+    if (t === '' || t.endsWith('(')) { C.expr = t + (o === '−' ? '−' : ''); return; }
+    C.expr = t + o; return;
+  }
+  C.expr += o;
+}
+function cPost(p) {
+  if (C.err) return;
+  if (C.done) { C.expr = plain(C.ans); C.done = false; }
+  if (!needsMul(C.expr)) return;
+  C.expr += p;
+}
+function cFn(v) {
+  if (C.err) { C.expr = ''; C.err = null; C.done = false; }
+  if (C.done) { C.expr = v + plain(C.ans) + ')'; C.done = false; return; }
+  C.expr += (needsMul(C.expr) ? '×' : '') + v;
+}
+function cConst(v) {
+  startNew();
+  C.expr += (needsMul(C.expr) ? '×' : '') + v;
+}
+function cParen(c) {
+  if (c === '(') {
+    startNew();
+    C.expr += (needsMul(C.expr) ? '×' : '') + '(';
+  } else {
+    if (C.err || C.done) return;
+    const open = (C.expr.match(/\(/g) || []).length, close = (C.expr.match(/\)/g) || []).length;
+    if (open > close && needsMul(C.expr)) C.expr += ')';
+  }
+}
+function cNumber(raw) {
+  startNew();
+  if (needsMul(C.expr)) C.expr += '×';
+  C.expr += raw;
+}
+function cNeg() {
+  if (C.err) return;
+  if (C.done) { C.expr = plain(-C.ans); C.done = false; return; }
+  const e = C.expr, m = /(\d+\.?\d*|\.\d+)$/.exec(e);
+  if (!m) {
+    if (e === '' || /[(×÷^+]$/.test(e)) C.expr += '−';
+    else if (e.slice(-1) === '−' && (e.length === 1 || /[(×÷^+−]$/.test(e.slice(0, -1)))) C.expr = e.slice(0, -1);
+    return;
+  }
+  const i = m.index, p = e[i - 1], pp = e[i - 2];
+  if (p === '−' && (i - 1 === 0 || /[(+−×÷^]/.test(pp))) C.expr = e.slice(0, i - 1) + e.slice(i);
+  else if (p === '+') C.expr = e.slice(0, i - 1) + '−' + e.slice(i);
+  else if (p === '−') C.expr = e.slice(0, i - 1) + '+' + e.slice(i);
+  else if (p === undefined || /[(×÷^]/.test(p)) C.expr = e.slice(0, i) + '−' + e.slice(i);
+}
+function cBack() {
+  if (C.err) { C.err = null; return; }
+  C.done = false;
+  const m = FN_TAIL.exec(C.expr);
+  C.expr = m ? C.expr.slice(0, m.index) : C.expr.slice(0, -1);
+}
+function cEquals() {
+  if (C.err || C.done || !C.expr) return;
+  try {
+    const v = evaluate(C.expr, ctx());
+    C.ans = v; C.done = true;
+    if (!/^−?[\d.]+$/.test(C.expr)) {
+      addHistory({
+        mode: S.mode === 'scientific' ? 'scientific' : 'standard', expr: prettyExpr(C.expr, false), exprRaw: C.expr,
+        result: fmt(v), raw: plain(v), angle: S.mode === 'scientific' ? S.angle : undefined,
+        note: S.mode === 'scientific' ? S.angle.toUpperCase() : undefined
+      });
+    }
+  } catch (e) {
+    if (e instanceof CalcError) { C.err = e.message; C.done = false; } else throw e;
+  }
+}
+function curVal() {
+  if (C.err) return null;
+  if (C.done) return C.ans;
+  const t = trimIncomplete(C.expr);
+  if (!t) return 0;
+  try { return evaluate(t, ctx()); } catch (e) { return null; }
+}
+function cMem(op) {
+  if (op === 'mc') { C.mem = 0; toast('Memory cleared'); return; }
+  if (op === 'mr') {
+    if (!C.expr || C.done || C.err) { C.expr = plain(C.mem); C.ans = C.mem; C.done = true; C.err = null; }
+    else cNumber(plain(C.mem));
+    return;
+  }
+  const v = curVal();
+  if (v === null) { toast('Nothing to store yet', true); return; }
+  if (op === 'ms') C.mem = v;
+  if (op === 'm+') C.mem = cl(C.mem + v);
+  if (op === 'm-') C.mem = cl(C.mem - v);
+  if (!C.done) { C.expr = C.expr || '0'; C.ans = v; C.done = true; }
+  toast('Memory: ' + fmt(C.mem));
+}
+function stdApply(d) {
+  if (C.expr.length >= 200 && ['num', 'op', 'post', 'fn', 'const', 'paren'].includes(d.k)) { toast('Expression is too long', true); return; }
+  switch (d.k) {
+    case 'num': cDigit(d.v); break;
+    case 'op': cOp(d.v); break;
+    case 'post': cPost(d.v); break;
+    case 'fn': cFn(d.v); break;
+    case 'const': cConst(d.v); break;
+    case 'paren': cParen(d.v); break;
+    case 'neg': cNeg(); break;
+    case 'back': cBack(); break;
+    case 'clear': C.expr = ''; C.done = false; C.err = null; break;
+    case 'eq': cEquals(); break;
+    case 'mem': cMem(d.v); break;
+  }
+}
+
+/* =====================================================================
+   PROGRAMMER input logic
+   ===================================================================== */
+const OP_TAIL = /\s(?:\+|−|×|÷|MOD|AND|OR|XOR|<<|>>)\s$/;
+const gReset = () => { if (G.err || G.done) { G.expr = ''; G.err = null; G.done = false; } };
+function gDigit(d) {
+  if (parseInt(d, 16) >= S.base) return;
+  gReset();
+  if (/\)$/.test(G.expr)) return;
+  const tail = /[0-9A-F]*$/i.exec(G.expr)[0];
+  if (tail === '0') G.expr = G.expr.slice(0, -1) + d; else G.expr += d;
+}
+function gOp(op) {
+  if (G.err) { G.expr = ''; G.err = null; G.done = false; }
+  if (G.done) { G.expr = fmtBig(G.val, S.base, S.bits, false); G.done = false; }
+  const e = G.expr;
+  if (!e) { if (op === '−') G.expr = '−'; else G.expr = '0 ' + op + ' '; return; }
+  if (e.endsWith('(')) { if (op === '−') G.expr += '−'; return; }
+  if (/NOT $/.test(e) || e === '−') return;
+  const m = OP_TAIL.exec(e);
+  if (m) { G.expr = e.slice(0, m.index) + ' ' + op + ' '; return; }
+  G.expr = e + ' ' + op + ' ';
+}
+function gNot() {
+  if (G.err) { G.expr = ''; G.err = null; G.done = false; }
+  if (G.done) { G.expr = 'NOT ' + fmtBig(G.val, S.base, S.bits, false); G.done = false; return; }
+  if (!G.expr || /[\s(]$/.test(G.expr)) G.expr += 'NOT ';
+}
+function gParen(c) {
+  if (c === '(') {
+    gReset();
+    if (!G.expr || /[\s(]$/.test(G.expr)) G.expr += '(';
+  } else {
+    if (G.err || G.done) return;
+    const open = (G.expr.match(/\(/g) || []).length, close = (G.expr.match(/\)/g) || []).length;
+    if (open > close && /[0-9A-F)]$/i.test(G.expr)) G.expr += ')';
+  }
+}
+function gBack() {
+  if (G.err) { G.err = null; return; }
+  G.done = false;
+  const m = /(?:\s(?:\+|−|×|÷|MOD|AND|OR|XOR|<<|>>)\s|NOT\s)$/.exec(G.expr);
+  G.expr = m ? G.expr.slice(0, m.index) : G.expr.slice(0, -1);
+}
+function gEquals() {
+  if (G.err || G.done || !G.expr) return;
+  try {
+    const v = progEval(G.expr, S.base, S.bits);
+    G.val = v; G.pv = v; G.done = true;
+    if (!/^−?[0-9A-F]+$/i.test(G.expr)) {
+      addHistory({
+        mode: 'programmer', expr: G.expr, exprRaw: G.expr, result: fmtBig(v, S.base, S.bits, false),
+        raw: v.toString(10), base: S.base, bits: S.bits, note: BASE_NAME[S.base]
+      });
+    }
+  } catch (e) {
+    if (e instanceof CalcError) { G.err = e.message; G.done = false; } else throw e;
+  }
+}
+function gNumber(txt) {
+  gReset();
+  if (!G.expr || /[\s(]$/.test(G.expr)) G.expr += txt; else toast('Add an operator first', true);
+}
+function gBase(b) {
+  if (b === S.base) return;
+  let v = null;
+  if (!G.err && G.expr) {
+    try { v = G.done ? G.val : progEval(trimProgIncomplete(G.expr) || '0', S.base, S.bits); } catch (e) { v = null; }
+  }
+  S.base = b; saveSettings();
+  if (v !== null) { G.expr = fmtBig(v, b, S.bits, false); G.val = v; G.pv = v; G.done = false; }
+  else { G.expr = ''; G.err = null; G.done = false; }
+  render();
+}
+function progApply(d) {
+  if (G.expr.length >= 200 && d.k !== 'back' && d.k !== 'clear' && d.k !== 'eq') { toast('Expression is too long', true); return; }
+  switch (d.k) {
+    case 'num': gDigit(d.v); break;
+    case 'bop': gOp(d.v); break;
+    case 'not': gNot(); break;
+    case 'paren': gParen(d.v); break;
+    case 'back': gBack(); break;
+    case 'clear': G.expr = ''; G.done = false; G.err = null; break;
+    case 'eq': gEquals(); break;
+  }
+}
+
+/* =====================================================================
+   PERCENTAGE & DISCOUNT
+   ===================================================================== */
+const PCT = {
+  of: {
+    label: 'What is X% of Y?', f: [['x', 'Percentage (X %)'], ['y', 'Of value (Y)']],
+    run(v) {
+      const r = cl(v.x / 100 * v.y);
+      return { expr: nfmt(v.x) + '% of ' + nfmt(v.y), val: r, text: fmt(r),
+        lines: [nfmt(v.x) + '% × ' + nfmt(v.y), '= (' + nfmt(v.x) + ' ÷ 100) × ' + nfmt(v.y), '= ' + fmt(r)], rows: [] };
+    }
+  },
+  is: {
+    label: 'X is what % of Y?', f: [['x', 'Part (X)'], ['y', 'Whole (Y)']],
+    run(v) {
+      const expr = nfmt(v.x) + ' is what % of ' + nfmt(v.y);
+      if (v.y === 0) return { expr, error: ERR.div0 };
+      const r = cl(v.x / v.y * 100);
+      return { expr, val: r, text: fmt(r) + '%', lines: ['(' + nfmt(v.x) + ' ÷ ' + nfmt(v.y) + ') × 100', '= ' + fmt(r) + '%'], rows: [] };
+    }
+  },
+  chg: {
+    label: 'Increase / Decrease', f: [['a', 'Original value'], ['b', 'New value']],
+    run(v) {
+      const expr = 'Change from ' + nfmt(v.a) + ' to ' + nfmt(v.b);
+      if (v.a === 0) return { expr, error: ERR.div0 };
+      const d = cl(v.b - v.a), r = cl(d / Math.abs(v.a) * 100);
+      const text = (r > 0 ? '+' : '') + fmt(r) + '%';
+      return { expr, val: r, text,
+        lines: ['(' + nfmt(v.b) + ' − ' + nfmt(v.a) + ') ÷ ' + nfmt(Math.abs(v.a)) + ' × 100', '= ' + fmt(d) + ' ÷ ' + nfmt(Math.abs(v.a)) + ' × 100', '= ' + text],
+        rows: [['Result', r > 0 ? 'Increase' : r < 0 ? 'Decrease' : 'No change'], ['Difference', (d > 0 ? '+' : '') + fmt(d)]] };
+    }
+  },
+  disc: {
+    label: 'Final price (discount & tax)', f: [['p', 'Original price'], ['d', 'Discount (%)'], ['t', 'Sales tax (%)']],
+    run(v) {
+      const expr = nfmt(v.p) + ' − ' + nfmt(v.d) + '% + ' + nfmt(v.t) + '% tax';
+      if (v.d < 0 || v.d > 100 || v.t < 0) return { expr, error: ERR.domain };
+      const after = cl(v.p * (1 - v.d / 100)), tax = cl(after * v.t / 100), fin = cl(after + tax), save = cl(v.p - after);
+      return { expr, val: fin, text: fmt(fin),
+        lines: [nfmt(v.p) + ' × (1 − ' + nfmt(v.d) + '%) = ' + fmt(after), fmt(after) + ' × (1 + ' + nfmt(v.t) + '%) = ' + fmt(fin)],
+        rows: [['You save', fmt(save)], ['Price after discount', fmt(after)], ['Tax amount', fmt(tax)], ['Final price', fmt(fin)]] };
+    }
+  }
+};
+function parseField(raw) {
+  const s = String(raw).replace(/[,\s]/g, '');
+  return /^[-+]?(\d+\.?\d*|\.\d+)$/.test(s) ? Number(s) : NaN;
+}
+function renderPctInputs() {
+  const subs = $('#pct-subs'); subs.textContent = '';
+  Object.keys(PCT).forEach(k => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'pill sm'; b.dataset.sub = k; b.textContent = PCT[k].label;
+    b.setAttribute('aria-pressed', String(k === P.sub)); subs.appendChild(b);
+  });
+  const f = $('#pct-fields'); f.textContent = '';
+  PCT[P.sub].f.forEach(pair => {
+    const w = document.createElement('div'); w.className = 'field';
+    const lab = document.createElement('label'); lab.htmlFor = 'pf-' + pair[0]; lab.textContent = pair[1];
+    const inp = document.createElement('input');
+    inp.id = 'pf-' + pair[0]; inp.type = 'text'; inp.inputMode = 'decimal'; inp.autocomplete = 'off'; inp.spellcheck = false;
+    inp.dataset.key = pair[0]; inp.value = P.vals[P.sub][pair[0]];
+    w.append(lab, inp); f.appendChild(w);
+  });
+  updatePct();
+}
+function updatePct() {
+  const def = PCT[P.sub], vals = P.vals[P.sub], nums = {}; let ok = true;
+  def.f.forEach(pair => { const v = parseField(vals[pair[0]]); if (Number.isNaN(v)) ok = false; nums[pair[0]] = v; });
+  P.res = ok ? def.run(nums) : null;
+  const fm = $('#pct-formula'), rows = $('#pct-rows');
+  fm.textContent = ''; rows.textContent = '';
+  const title = document.createElement('div'); title.className = 'ft'; title.textContent = 'Formula breakdown'; fm.appendChild(title);
+  const line = (t, cls) => { const d = document.createElement('div'); d.className = 'fl' + (cls ? ' ' + cls : ''); d.textContent = t; fm.appendChild(d); };
+  if (!P.res) line('Enter valid numbers to see the formula.');
+  else if (P.res.error) line(P.res.error, '');
+  else {
+    P.res.lines.forEach((t, i) => line(t, i === P.res.lines.length - 1 ? 'last' : ''));
+    P.res.rows.forEach(r => {
+      const d = document.createElement('div'), dt = document.createElement('dt'), dd = document.createElement('dd');
+      dt.textContent = r[0]; dd.textContent = r[1]; d.append(dt, dd); rows.appendChild(d);
+    });
+  }
+  if (S.mode === 'percentage') renderDisplay();
+}
+
+/* =====================================================================
+   VIEWS (what the display shows) + rendering
+   ===================================================================== */
+function stdView() {
+  const e = C.expr, v = { top: e ? prettyExpr(e, S.sep) + (C.done ? ' =' : '') : '', main: '0', cls: '', eq: '', res: '0' };
+  if (C.err) { v.main = C.err; v.cls = 'error'; v.res = ''; return v; }
+  if (C.done) { v.main = fmt(C.ans); v.res = v.main; v.eq = prettyExpr(e, false) + ' = ' + v.main; return v; }
+  if (!e) return v;
+  const t = trimIncomplete(e);
+  if (t) {
+    if (/^−?[\d.]+$/.test(t)) { v.main = groupTyped(t); v.res = v.main; v.eq = prettyExpr(e, false); return v; }
+    try {
+      const val = evaluate(t, ctx());
+      v.main = fmt(val); v.cls = 'preview'; v.res = v.main; v.eq = prettyExpr(e, false) + ' = ' + v.main;
+      return v;
+    } catch (x) { /* fall through to showing the number being typed */ }
+  }
+  const tail = (/[\d.]+$/.exec(e) || ['0'])[0];
+  v.main = groupTyped(tail); v.res = v.main; v.eq = prettyExpr(e, false);
+  return v;
+}
+function pctView() {
+  const r = P.res;
+  if (!r) return { top: 'Enter values below', main: '—', cls: '', eq: '', res: '' };
+  if (r.error) return { top: r.expr || '', main: r.error, cls: 'error', eq: '', res: '' };
+  return { top: r.expr, main: r.text, cls: '', eq: r.expr + ' = ' + r.text, res: r.text };
+}
+function progView() {
+  const e = G.expr, v = { top: e ? e + (G.done ? ' =' : '') : '', main: '0', cls: '', eq: '', res: '0', val: 0n };
+  if (G.err) { v.main = G.err; v.cls = 'error'; v.res = ''; v.val = G.pv; return v; }
+  let val = 0n;
+  if (G.done) val = G.val;
+  else if (e) {
+    const t = trimProgIncomplete(e);
+    try { val = t ? progEval(t, S.base, S.bits) : 0n; G.pv = val; if (t && !/^−?[0-9A-Fa-f]+$/.test(t)) v.cls = 'preview'; }
+    catch (x) { val = G.pv; }
+  }
+  v.val = val;
+  v.main = fmtBig(val, S.base, S.bits, S.sep);
+  v.res = v.main;
+  v.eq = e ? e + ' = ' + v.main + ' (' + BASE_NAME[S.base] + ')' : '';
+  return v;
+}
+
+let view = {};
+function fit() {
+  const span = el.res, box = el.main;
+  span.style.fontSize = '';
+  const max = box.clientWidth;
+  if (!max) return;
+  let size = parseFloat(getComputedStyle(span).fontSize) || 43, guard = 40;
+  while (span.offsetWidth > max && size > 15 && guard-- > 0) { size -= 2; span.style.fontSize = size + 'px'; }
+}
+function renderDisplay() {
+  view = S.mode === 'percentage' ? pctView() : S.mode === 'programmer' ? progView() : stdView();
+  el.top.textContent = view.top || '\u00A0';
+  el.top.scrollLeft = el.top.scrollWidth;
+  el.res.textContent = view.main;
+  el.main.className = 'disp-main' + (view.cls ? ' ' + view.cls : '');
+  fit();
+  const b = [];
+  if (S.mode === 'scientific') b.push(['badge', S.angle.toUpperCase()]);
+  if ((S.mode === 'standard' || S.mode === 'scientific') && C.mem !== 0) b.push(['badge amber', 'M']);
+  if (S.mode === 'programmer') { b.push(['badge', BASE_NAME[S.base]]); b.push(['badge', S.bits + '-BIT']); }
+  if (S.mode === 'percentage') b.push(['badge', '%']);
+  el.badges.textContent = '';
+  b.forEach(x => { const s = document.createElement('span'); s.className = x[0]; s.textContent = x[1]; el.badges.appendChild(s); });
+}
+function renderBases(val) {
+  const wrap = $('#prog-bases');
+  if (wrap.childElementCount !== 4) {
+    wrap.textContent = '';
+    [10, 16, 8, 2].forEach(bs => {
+      const btn = document.createElement('button'); btn.type = 'button'; btn.className = 'base-row'; btn.dataset.base = bs;
+      const l = document.createElement('b'); l.textContent = BASE_NAME[bs];
+      const s = document.createElement('span');
+      btn.append(l, s); wrap.appendChild(btn);
+    });
+  }
+  [10, 16, 8, 2].forEach((bs, i) => {
+    const btn = wrap.children[i];
+    btn.setAttribute('aria-pressed', String(S.base === bs));
+    btn.children[1].textContent = fmtBig(val, bs, S.bits, bs === 10 ? S.sep : true);
+  });
+}
+function updateProgKeys() {
+  $$('#panel-prog .key').forEach(b => {
+    const d = b._d;
+    if (d && d.k === 'num' && /^[0-9A-F]$/.test(d.v)) b.disabled = parseInt(d.v, 16) >= S.base;
+  });
+}
+function render() {
+  renderDisplay();
+  if (S.mode === 'programmer') { renderBases(view.val); updateProgKeys(); }
+}
+
+/* =====================================================================
+   KEYPAD DEFINITIONS + RENDERING
+   ===================================================================== */
+const D = (l, c, k, v, id, a, s) => ({ l, c, k, v, id, a, s });
+const MEM = [
+  D('MC', 'mem', 'mem', 'mc', null, 'Memory clear'), D('MR', 'mem', 'mem', 'mr', null, 'Memory recall'),
+  D('M+', 'mem', 'mem', 'm+', null, 'Memory add'), D('M−', 'mem', 'mem', 'm-', null, 'Memory subtract'), D('MS', 'mem', 'mem', 'ms', null, 'Memory store')
+];
+const SCI = [
+  D('sin', 'fn', 'fn', 'sin(', 's', 'Sine'), D('cos', 'fn', 'fn', 'cos(', 'c', 'Cosine'), D('tan', 'fn', 'fn', 'tan(', 't', 'Tangent'),
+  D('π', 'fn', 'const', 'π', 'p', 'Pi'), D('e', 'fn', 'const', 'e', 'e', 'Euler number e'), D('(', 'fn', 'paren', '(', '(', 'Open bracket'),
+  D('asin', 'fn', 'fn', 'asin(', null, 'Inverse sine'), D('acos', 'fn', 'fn', 'acos(', null, 'Inverse cosine'), D('atan', 'fn', 'fn', 'atan(', null, 'Inverse tangent'),
+  D('log', 'fn', 'fn', 'log(', 'l', 'Logarithm base 10'), D('ln', 'fn', 'fn', 'ln(', 'n', 'Natural logarithm'), D(')', 'fn', 'paren', ')', ')', 'Close bracket'),
+  D('x²', 'fn', 'post', '²', null, 'Square'), D('x³', 'fn', 'post', '³', null, 'Cube'), D('xʸ', 'fn', 'op', '^', '^', 'Power'),
+  D('eˣ', 'fn', 'fn', 'e^(', null, 'e to the power x'), D('10ˣ', 'fn', 'fn', '10^(', null, '10 to the power x'), D('n!', 'fn', 'post', '!', '!', 'Factorial'),
+  D('√x', 'fn', 'fn', '√(', 'r', 'Square root'), D('∛x', 'fn', 'fn', '∛(', null, 'Cube root'), D('|x|', 'fn', 'fn', 'abs(', null, 'Absolute value'),
+  D('1/x', 'fn', 'fn', '1÷(', null, 'Reciprocal'), D('Ans', 'fn', 'const', 'Ans', null, 'Previous answer', 2)
+];
+const dig = n => D(String(n), 'num', 'num', String(n), String(n));
+const MAIN = [
+  D('AC', 'util', 'clear', null, 'clear', 'All clear'), D('⌫', 'util', 'back', null, 'back', 'Backspace'), D('%', 'op', 'post', '%', '%', 'Percent'), D('÷', 'op', 'op', '÷', '/', 'Divide'),
+  dig(7), dig(8), dig(9), D('×', 'op', 'op', '×', '*', 'Multiply'),
+  dig(4), dig(5), dig(6), D('−', 'op', 'op', '−', '-', 'Subtract'),
+  dig(1), dig(2), dig(3), D('+', 'op', 'op', '+', '+', 'Add'),
+  D('+/−', 'num', 'neg', null, 'neg', 'Toggle sign'), dig(0), D('.', 'num', 'num', '.', '.', 'Decimal point'), D('=', 'eq', 'eq', null, 'eq', 'Equals')
+];
+const PTOP = 'ABCDEF'.split('').map(ch => D(ch, 'num', 'num', ch, ch, 'Hex digit ' + ch)).concat([
+  D('AND', 'fn', 'bop', 'AND', 'AND', 'Bitwise AND'), D('OR', 'fn', 'bop', 'OR', 'OR', 'Bitwise OR'), D('XOR', 'fn', 'bop', 'XOR', 'XOR', 'Bitwise XOR'),
+  D('NOT', 'fn', 'not', null, 'NOT', 'Bitwise NOT'), D('<<', 'fn', 'bop', '<<', '<<', 'Shift left'), D('>>', 'fn', 'bop', '>>', '>>', 'Shift right')
+]);
+const PMAIN = [
+  D('AC', 'util', 'clear', null, 'clear', 'All clear'), D('⌫', 'util', 'back', null, 'back', 'Backspace'), D('MOD', 'op', 'bop', 'MOD', 'MOD', 'Modulo'), D('÷', 'op', 'bop', '÷', '/', 'Divide'),
+  dig(7), dig(8), dig(9), D('×', 'op', 'bop', '×', '*', 'Multiply'),
+  dig(4), dig(5), dig(6), D('−', 'op', 'bop', '−', '-', 'Subtract'),
+  dig(1), dig(2), dig(3), D('+', 'op', 'bop', '+', '+', 'Add'),
+  D('(', 'num', 'paren', '(', '(', 'Open bracket'), dig(0), D(')', 'num', 'paren', ')', ')', 'Close bracket'), D('=', 'eq', 'eq', null, 'eq', 'Equals')
+];
+const byId = defs => { const m = {}; defs.forEach(d => { if (d.id) m[d.id] = d; }); return m; };
+const STD_BY_ID = byId(MAIN.concat(SCI)), PROG_BY_ID = byId(PTOP.concat(PMAIN));
+
+function buildKeys(container, defs) {
+  container.textContent = '';
+  defs.forEach(d => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'key k-' + d.c; b.textContent = d.l;
+    if (d.a) b.setAttribute('aria-label', d.a);
+    if (d.id) b.dataset.kid = d.id;
+    if (d.s) b.style.gridColumn = 'span ' + d.s;
+    b._d = d; container.appendChild(b);
+  });
+}
+
+function apply(d) { if (S.mode === 'programmer') progApply(d); else if (S.mode !== 'percentage') stdApply(d); }
+function press(d) {
+  apply(d); render();
+  if (d.k === 'eq') announce(view.cls === 'error' ? view.main : (view.eq || view.main));
+}
+
+/* =====================================================================
+   KEYBOARD + PASTE
+   ===================================================================== */
+function keyToId(k) {
+  if (S.mode === 'programmer') {
+    const pm = { '+': '+', '-': '-', '*': '*', '/': '/', '%': 'MOD', '&': 'AND', '|': 'OR', '^': 'XOR', '~': 'NOT', '<': '<<', '>': '>>', '(': '(', ')': ')', 'Enter': 'eq', '=': 'eq', 'Backspace': 'back', 'Escape': 'clear', 'Delete': 'clear' };
+    if (pm[k]) return pm[k];
+    return /^[0-9a-fA-F]$/.test(k) ? k.toUpperCase() : null;
+  }
+  const sm = { '+': '+', '-': '-', '*': '*', 'x': '*', 'X': '*', '/': '/', '^': '^', '(': '(', ')': ')', '!': '!', '%': '%', '.': '.', 'Enter': 'eq', '=': 'eq', 'Backspace': 'back', 'Escape': 'clear', 'Delete': 'clear' };
+  if (sm[k]) return sm[k];
+  if (/^[0-9]$/.test(k)) return k;
+  if (S.mode === 'scientific' && /^[pelnrsctPELNRSCT]$/.test(k)) return k.toLowerCase();
+  return null;
+}
+function handleKey(k) {
+  if (S.mode === 'percentage') return false;
+  const id = keyToId(k); if (!id) return false;
+  const d = (S.mode === 'programmer' ? PROG_BY_ID : STD_BY_ID)[id]; if (!d) return false;
+  const btn = $$('.key').find(b => b.dataset.kid === id && b.offsetParent !== null);
+  if (btn && btn.disabled) return true;
+  if (btn) { btn.classList.add('pressed'); setTimeout(() => btn.classList.remove('pressed'), 110); }
+  apply(d);
+  return d;
+}
+let wsVisible = true;
+function kbActive(t) {
+  if (t && (/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) || t.isContentEditable)) return false;
+  if (t && el.ws.contains(t)) return true;
+  if (!t || t === document.body || t === document.documentElement) return wsVisible;
+  return false;
+}
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey || e.metaKey || e.altKey || e.defaultPrevented) return;
+  const t = e.target;
+  if (!kbActive(t)) return;
+  if (t.tagName === 'BUTTON' && !t.classList.contains('key') && (e.key === 'Enter' || e.key === ' ')) return;
+  const d = handleKey(e.key);
+  if (!d) return;
+  e.preventDefault(); render();
+  if (d.k === 'eq') announce(view.cls === 'error' ? view.main : (view.eq || view.main));
+});
+document.addEventListener('paste', e => {
+  const t = e.target;
+  if (!kbActive(t) || S.mode === 'percentage') return;
+  const text = (e.clipboardData || window.clipboardData || { getData: () => '' }).getData('text');
+  if (!text) return;
+  e.preventDefault();
+  const cleaned = text.replace(/[\s,_]/g, '').replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-').slice(0, 200);
+  let n = 0;
+  for (const ch of cleaned) { if (handleKey(ch)) n++; }
+  render(); toast(n ? 'Pasted' : 'Nothing to paste', !n);
+});
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver(en => { wsVisible = en[0].isIntersecting; }, { threshold: 0.15 }).observe(el.ws);
+}
+
+/* =====================================================================
+   HISTORY TAPE
+   ===================================================================== */
+function persistHist() { store.set(HIST_KEY, hist); }
+function addHistory(e) {
+  const top = hist[0];
+  if (top && top.mode === e.mode && top.expr === e.expr && top.result === e.result) return;
+  hist.unshift(Object.assign({ id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), ts: Date.now(), star: false }, e));
+  while (hist.length > 300) {
+    let idx = -1;
+    for (let i = hist.length - 1; i >= 0; i--) { if (!hist[i].star) { idx = i; break; } }
+    if (idx < 0) hist.pop(); else hist.splice(idx, 1);
+  }
+  persistHist(); renderHistory();
+}
+function histItem(h) {
+  const li = document.createElement('li'); li.className = 'h-item'; li.dataset.id = h.id;
+  const main = document.createElement('button'); main.type = 'button'; main.className = 'h-main'; main.dataset.act = 'reuse'; main.title = 'Reuse this calculation';
+  const tag = document.createElement('span'); tag.className = 'h-tag'; tag.textContent = TAGS[h.mode] + (h.note ? ' · ' + h.note : '');
+  const ex = document.createElement('span'); ex.className = 'h-expr'; ex.textContent = h.expr;
+  const rs = document.createElement('span'); rs.className = 'h-res'; rs.textContent = '= ' + h.result;
+  main.append(tag, ex, rs);
+  const act = document.createElement('div'); act.className = 'h-actions';
+  const mk = (cls, txt, a, label) => { const b = document.createElement('button'); b.type = 'button'; b.className = cls; b.textContent = txt; b.dataset.act = a; b.title = label; b.setAttribute('aria-label', label); return b; };
+  const star = mk('h-star', h.star ? '★' : '☆', 'star', h.star ? 'Unstar' : 'Star / pin');
+  star.setAttribute('aria-pressed', String(!!h.star));
+  act.append(star, mk('h-use', '↳', 'insert', 'Insert result into calculator'), mk('h-del', '✕', 'del', 'Delete entry'));
+  li.append(main, act);
+  return li;
+}
+function renderHistory() {
+  const q = el.hsearch.value.trim().toLowerCase();
+  const list = hist.filter(h => {
+    if (S.hf === 'starred' && !h.star) return false;
+    if (S.hf !== 'all' && S.hf !== 'starred' && h.mode !== S.hf) return false;
+    if (q && !(h.expr + ' ' + h.result + ' ' + h.mode).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  el.hcount.textContent = hist.length;
+  el.hlist.textContent = '';
+  if (!list.length) {
+    const li = document.createElement('li'); li.className = 'hist-empty';
+    li.textContent = hist.length ? 'No matching calculations.' : 'No calculations yet. Press = and your results will appear here.';
+    el.hlist.appendChild(li); return;
+  }
+  list.forEach(h => el.hlist.appendChild(histItem(h)));
+}
+function focusCalc() {
+  const r = el.ws.getBoundingClientRect();
+  if (r.top < 0 || r.top > window.innerHeight * 0.5) el.ws.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function reuse(h) {
+  if (h.mode === 'programmer') {
+    if ([2, 8, 10, 16].includes(h.base)) S.base = h.base;
+    if ([8, 16, 32, 64].includes(h.bits)) { S.bits = h.bits; $('#sel-bits').value = String(S.bits); }
+    G.expr = String(h.exprRaw || h.expr); G.done = false; G.err = null;
+    setMode('programmer');
+  } else if (h.mode === 'percentage') {
+    C.expr = String(h.raw || ''); C.done = false; C.err = null;
+    setMode('standard');
+  } else {
+    if (h.angle === 'deg' || h.angle === 'rad') S.angle = h.angle;
+    C.expr = String(h.exprRaw || ''); C.done = false; C.err = null;
+    setMode(h.mode === 'scientific' ? 'scientific' : 'standard');
+  }
+  syncOptions(); focusCalc();
+}
+function insertResult(h) {
+  const raw = String(h.raw || '');
+  if (S.mode === 'programmer') {
+    if (!/^[-−]?\d+$/.test(raw)) { toast('Programmer mode needs a whole number', true); return; }
+    gNumber(fmtBig(BigInt(raw.replace('−', '-')), S.base, S.bits, false));
+  } else {
+    if (S.mode === 'percentage') setMode('standard');
+    cNumber(raw || h.result);
+  }
+  render(); focusCalc();
+}
+el.hlist.addEventListener('click', e => {
+  const b = e.target.closest('button[data-act]'); if (!b) return;
+  const id = b.closest('.h-item').dataset.id, h = hist.find(x => x.id === id); if (!h) return;
+  const a = b.dataset.act;
+  if (a === 'star') { h.star = !h.star; persistHist(); renderHistory(); }
+  else if (a === 'del') { hist = hist.filter(x => x !== h); persistHist(); renderHistory(); }
+  else if (a === 'insert') insertResult(h);
+  else reuse(h);
+});
+$('#hist-filters').addEventListener('click', e => {
+  const b = e.target.closest('[data-hf]'); if (!b) return;
+  S.hf = b.dataset.hf; saveSettings(); syncOptions(); renderHistory();
+});
+el.hsearch.addEventListener('input', renderHistory);
+$('#hist-toggle').addEventListener('click', e => {
+  const card = $('#history'), open = !card.classList.contains('open');
+  card.classList.toggle('open', open);
+  e.currentTarget.setAttribute('aria-expanded', String(open)); e.currentTarget.textContent = open ? 'Hide' : 'Show';
+});
+function download(name, text, type) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([text], { type: type + ';charset=utf-8' }));
+  a.download = name; document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+function exportHist(kind) {
+  if (!hist.length) { toast('Nothing to export yet', true); return; }
+  const stamp = t => new Date(t).toISOString().replace('T', ' ').slice(0, 16);
+  const rows = hist.slice().reverse();
+  if (kind === 'txt') {
+    download('omnicalc-history.txt', rows.map(h => '[' + stamp(h.ts) + '] ' + TAGS[h.mode] + (h.note ? ' (' + h.note + ')' : '') + ': ' + h.expr + ' = ' + h.result + (h.star ? ' *' : '')).join('\n') + '\n', 'text/plain');
+  } else {
+    const cell = v => { let s = String(v); if (/^[=@]|^[+-](?![\d.,])/.test(s)) s = "'" + s; return '"' + s.replace(/"/g, '""') + '"'; };
+    const lines = ['Time,Mode,Note,Expression,Result,Starred'].concat(rows.map(h => [stamp(h.ts), TAGS[h.mode], h.note || '', h.expr, h.result, h.star ? 'yes' : ''].map(cell).join(',')));
+    download('omnicalc-history.csv', lines.join('\r\n') + '\r\n', 'text/csv');
+  }
+  toast('Exported ' + rows.length + ' entries');
+}
+$('#exp-txt').addEventListener('click', () => exportHist('txt'));
+$('#exp-csv').addEventListener('click', () => exportHist('csv'));
+(function () {
+  const btn = $('#hist-clear'); let timer;
+  const disarm = () => { delete btn.dataset.armed; btn.textContent = 'Clear History'; };
+  btn.addEventListener('click', () => {
+    if (!hist.length) { toast('History is already empty', true); return; }
+    if (btn.dataset.armed) { clearTimeout(timer); hist = []; persistHist(); renderHistory(); disarm(); toast('History cleared'); }
+    else { btn.dataset.armed = '1'; btn.textContent = 'Click again to confirm'; timer = setTimeout(disarm, 3000); }
+  });
+})();
+
+/* =====================================================================
+   MODE + OPTION CONTROLS
+   ===================================================================== */
+function updateModeUI() {
+  $$('#modes .pill').forEach(b => b.setAttribute('aria-selected', String(b.dataset.mode === S.mode)));
+  const std = S.mode === 'standard' || S.mode === 'scientific';
+  $('#panel-std').hidden = !std;
+  $('#sci-keys').hidden = S.mode !== 'scientific';
+  $('#panel-pct').hidden = S.mode !== 'percentage';
+  $('#panel-prog').hidden = S.mode !== 'programmer';
+  $('#opt-angle').hidden = S.mode !== 'scientific';
+  $('#opt-round').hidden = S.mode === 'programmer';
+  $('#opt-bits').hidden = S.mode !== 'programmer';
+}
+function setMode(m) {
+  S.mode = m; saveSettings(); updateModeUI();
+  if (m === 'percentage') updatePct();
+  render();
+}
+function syncOptions() {
+  $$('[data-angle]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.angle === S.angle)));
+  $('#sel-round').value = S.round; $('#sel-bits').value = String(S.bits);
+  $('#sw-sep').setAttribute('aria-checked', String(S.sep));
+  $$('#hist-filters [data-hf]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.hf === S.hf)));
+}
+$('#modes').addEventListener('click', e => { const b = e.target.closest('[data-mode]'); if (b) setMode(b.dataset.mode); });
+$$('[data-angle]').forEach(b => b.addEventListener('click', () => {
+  S.angle = b.dataset.angle; saveSettings(); if (C.done) C.done = false; syncOptions(); render();
+}));
+$('#sel-round').addEventListener('change', e => { S.round = e.target.value; saveSettings(); updatePct(); render(); });
+$('#sel-bits').addEventListener('change', e => { S.bits = +e.target.value; saveSettings(); if (G.done) G.done = false; render(); });
+$('#sw-sep').addEventListener('click', () => { S.sep = !S.sep; saveSettings(); syncOptions(); updatePct(); render(); });
+$('#copy-res').addEventListener('click', () => copyText(view.cls === 'error' ? '' : asCopy(view.res || ''), 'Result copied'));
+$('#copy-eq').addEventListener('click', () => copyText(view.cls === 'error' ? '' : asCopy(view.eq || view.res || ''), 'Equation copied'));
+
+['mem-keys', 'sci-keys', 'main-keys', 'prog-top', 'prog-main'].forEach(id => {
+  $('#' + id).addEventListener('click', e => {
+    const b = e.target.closest('.key'); if (!b || b.disabled) return;
+    press(b._d);
+  });
+});
+$('#prog-bases').addEventListener('click', e => { const b = e.target.closest('[data-base]'); if (b) gBase(+b.dataset.base); });
+
+/* percentage panel events */
+$('#pct-subs').addEventListener('click', e => { const b = e.target.closest('[data-sub]'); if (b) { P.sub = b.dataset.sub; renderPctInputs(); } });
+$('#pct-fields').addEventListener('input', e => { const i = e.target; if (i.dataset.key) { P.vals[P.sub][i.dataset.key] = i.value; updatePct(); } });
+function savePct() {
+  const r = P.res;
+  if (!r || r.error) { toast('Enter valid numbers first', true); return; }
+  addHistory({ mode: 'percentage', expr: r.expr, exprRaw: r.expr, result: r.text, raw: plain(r.val) });
+  toast('Saved to history');
+}
+$('#pct-fields').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); savePct(); } });
+$('#pct-save').addEventListener('click', savePct);
+$('#pct-use').addEventListener('click', () => {
+  const r = P.res;
+  if (!r || r.error) { toast('Enter valid numbers first', true); return; }
+  setMode('standard'); cNumber(plain(r.val)); render(); focusCalc();
+});
+
+/* =====================================================================
+   PAGE CHROME: menu, anchors, FAQ, footer year
+   ===================================================================== */
+const menuBtn = $('#menu-btn'), navLinks = $('#nav-links');
+menuBtn.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', String(open)); menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+});
+$$('#nav-links a').forEach(a => a.addEventListener('click', () => { navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }));
+$$('[data-launch]').forEach(a => a.addEventListener('click', () => { setTimeout(() => el.ws.focus({ preventScroll: true }), 450); }));
+$$('[data-mode-link]').forEach(a => a.addEventListener('click', () => { setMode(a.dataset.modeLink); setTimeout(() => el.ws.focus({ preventScroll: true }), 450); }));
+$$('#faq-list details').forEach(d => d.addEventListener('toggle', () => {
+  if (d.open) $$('#faq-list details').forEach(o => { if (o !== d) o.open = false; });
+}));
+$('#yr').textContent = new Date().getFullYear();
+window.addEventListener('resize', fit);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+
+/* =====================================================================
+   INIT
+   ===================================================================== */
+buildKeys($('#mem-keys'), MEM);
+buildKeys($('#sci-keys'), SCI);
+buildKeys($('#main-keys'), MAIN);
+buildKeys($('#prog-top'), PTOP);
+buildKeys($('#prog-main'), PMAIN);
+syncOptions();
+renderPctInputs();
+updateModeUI();
+render();
+renderHistory();
+})();
+</script>
+</body>
+</html>
